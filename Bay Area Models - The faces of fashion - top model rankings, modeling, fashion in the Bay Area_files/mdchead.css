@@ -1,0 +1,16 @@
+
+.fullWidth {width: 100%;max-width: 1600px !important;margin-left: auto;margin-right: auto;}
+.fullWidthBackground {width: 100%; background-color: white;}
+
+*,:after,:before { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box }
+a, a:visited, a:active {color: black;}
+/*  this is needed or the qtip window ends up too narrow and the layout breaks */
+#qtip-popup {min-width: 400px;}
+
+.qtip {max-width:400px;} #qtip-popup {width:inherit;} #popup-work-right-thumbs img {margin:0 2px 4px 0;}
+/*.rainbow {
+  width: 100%;
+  height: 1px;
+  background-repeat: repeat-x;
+  background: linear-gradient(to right, #ef5350, #f9a825, #eeff41, #43a047, #2196f3, #7e57c2);
+}*/

@@ -1,0 +1,99 @@
+
+// mdchead js
+
+jQuery(document).ready(function() {    
+        const swipeableContainers = document.querySelectorAll('.swipeable_container');
+    
+        swipeableContainers.forEach(container => {
+            let touchstartX = 0;
+            let touchendX = 0;
+    
+            container.addEventListener('touchstart', function(e) {
+                touchstartX = e.changedTouches[0].screenX;
+            });
+    
+            container.addEventListener('touchend', function(e) {
+                touchendX = e.changedTouches[0].screenX;
+                handleSwipeGesture(this, touchstartX, touchendX);
+            });
+        });
+    
+        function handleSwipeGesture(container, start, end) {
+            const minSwipeDistance = 50; // Minimum distance to consider as swipe
+            const distance = end - start;
+    
+            if (Math.abs(distance) >= minSwipeDistance) {
+                if (end < start) {
+                    // Swipe left
+                    triggerClickOnChild(container, 'swipeable--right');
+                } else {
+                    // Swipe right
+                    triggerClickOnChild(container, 'swipeable--left');
+                }
+            }
+        }
+    
+        function triggerClickOnChild(container, childClass) {
+            const targetElement = container.querySelector('.' + childClass);
+            if (targetElement) {
+                targetElement.click();
+            }
+        }
+    jQuery('#sAS_ResultsHolder').on('click', function(event) {
+        if(typeof jQuery(event.target).closest('a').attr("href") != 'undefined') {document.location=jQuery(event.target).closest('a').attr("href");}
+    });
+    jQuery('#sSearch').on('click', function() {
+        jQuery(".top-bar").removeClass("expanded");//close the menu if open on the nav bar
+    });
+
+    jQuery('#sSearch').on('keypress', function() {
+        jQuery(".top-bar").removeClass("expanded");//close the menu if open on the nav bar
+        jQuery(this).css('background','#e9e9e9');
+        jQuery("#Xsearch").show();
+        jQuery(".Qsearch").hide();
+    });
+    jQuery('#tSearch').on('keypress', function() {
+        jQuery("#lXsearch").show();
+        jQuery(".Qsearch").hide();
+    });
+    jQuery("#Xsearch").on('click', function() {
+        jQuery("#Xsearch").hide();
+        jQuery(".Qsearch").show();
+        jQuery('#sSearch').val('');
+        jQuery('#sSearch').focus();
+    });
+    jQuery("#lXsearch").on('click', function() {
+        jQuery("#lXsearch").hide();
+        jQuery(".Qsearch").show();
+        jQuery('#tSearch').val('');
+        jQuery('#tSearch').focus();
+    });
+    jQuery(".Qsearch").on('click', function() {
+        jQuery(this).parent().find('input').focus();
+    });
+    jQuery('.mega-menu div.mdcTopNavSearchDiv input')
+    	.on('focus', function(){jQuery(this).parent('div').addClass( "mdcTopNavSearchDivBB" );})
+        .on('blur', function(){jQuery(this).parent('div').removeClass( "mdcTopNavSearchDivBB" );});
+
+    jQuery(".membershipCardProSelectButton").on('click', function() {
+    	document.cookie="membershipCardProSelect=" + jQuery(this).data('proselect') + ";domain=.models.com;samesite=strict;;path=/;secure";
+    });
+    jQuery('.showProToolsUpgradePopup').on('click', function () {
+      buttonClick = jQuery(this).data('proselect')
+      if (buttonClick === 'group') {
+        jQuery('.proToolsUpgradeConfirmGroup').show()
+        jQuery('.proToolsUpgradeConfirmSingle').hide()
+      } else {
+        jQuery('.proToolsUpgradeConfirmGroup').hide()
+        jQuery('.proToolsUpgradeConfirmSingle').show()
+      }
+      console.log()
+      showProToolsUpgradePopup()
+    })
+    
+});
+function showProToolsUpgradePopup() {
+  var popup = document.getElementById('proToolsUpgradePopup')
+  popup.style.display = popup.classList.contains('sb-popup') ? 'flex' : 'block'
+}
+function hideProToolsUpgradePopup() {document.getElementById('proToolsUpgradePopup').style.display = "none";}

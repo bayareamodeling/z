@@ -1,0 +1,50 @@
+.thumbnail {
+	float: left;
+	position: relative;
+	overflow:visible;
+	padding:0px 2px 5px 2px;
+}
+
+.image {
+	position: relative;
+	
+}
+
+
+.image img {
+	display: block;
+	position: relative;
+	border: 1px solid #a9a9a9;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 4px;
+}
+
+.caption, .clear, .feedback, .storycontent p, .postmetadata {
+	clear: both;
+}
+
+.clear {
+	height: 0;
+}
+
+.caption, .captionCaps {
+	font-size:10px;
+	margin:0pt;
+	padding:0pt;
+	text-align:center;
+}
+.captionCaps {text-transform:capitalize;}
+h4.caption, h4.captionCaps {
+	font-size:20px;
+	padding:0pt;
+	text-align:center;
+}
+
+h4.captionCaps {
+	margin-top:-20pt;
+}
+
+#editsubtitles th {
+	text-align: left;
+}

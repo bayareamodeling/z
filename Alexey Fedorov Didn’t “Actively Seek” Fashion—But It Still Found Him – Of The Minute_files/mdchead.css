@@ -1,0 +1,2011 @@
+/* alter foundation print settings */
+@media print {
+    body {padding: 0!important;}
+    .fixed {position: relative;}
+    a[href]:after { content: none; }
+    a, a:visited {text-decoration: initial;}
+    .top-bar .show-for-large-up {display:inherit!important;}
+    .top-bar .hide-for-large-up {display:none!important;}
+    .rankingsBody #ranksocial {display: none;}  /* rankings social row */
+    .rankingsBody #introbox {display: none;}  /* rankings description */
+    .rankingsBody .columns.medium-3 {width: 25%;}
+    .work-left .unSlick, .work-left .reSlick {display: none!important;}
+    .workSlider .columns {page-break-before: auto;page-break-after: auto;page-break-inside: avoid;}
+    .workSlider .columns img {max-height:450px;}
+    .agencyPicAction, .fb_iframe_widget.fb_iframe_widget_fluid {display: none;}
+    div {-webkit-print-color-adjust: exact;}
+    .small-1{width:8.33333%}.small-2{width:16.66667%}.small-3{width:25%}.small-4{width:33.33333%}.small-5{width:41.66667%}.small-6{width:50%}.small-7{width:58.33333%}.small-8{width:66.66667%}.small-9{width:75%}.small-10{width:83.33333%}.small-11{width:91.66667%}.small-12{width:100%}
+    .medium-1{width:8.33333%}.medium-2{width:16.66667%}.medium-3{width:25%}.medium-4{width:33.33333%}.medium-5{width:41.66667%}.medium-6{width:50%}.medium-7{width:58.33333%}.medium-8{width:66.66667%}.medium-9{width:75%}.medium-10{width:83.33333%}.medium-11{width:91.66667%}.medium-12{width:100%}
+    .large-1{width:8.33333%}.large-2{width:16.66667%}.large-3{width:25%}.large-4{width:33.33333%}.large-5{width:41.66667%}.large-6{width:50%}.large-7{width:58.33333%}.large-8{width:66.66667%}.large-9{width:75%}.large-10{width:83.33333%}.large-11{width:91.66667%}.large-12{width:100%}
+    #TrendingRow .trendlarge > div, #TrendingRow .trendsmall .columns > div {position: relative;}
+    .showslist, .fwimgheader {position: relative;}
+    .showslist h5 {font-size: 1.2rem;bottom:10%;margin:auto 5% auto  5%;}.fwimgheaderTitle {top:72%;}
+}
+/* END alter foundation print settings */
+
+.absoluteSpinner {position: absolute;display: none;padding:2rem;}
+
+/*body, html,.off-canvas-wrap{height:100%;overflow-y:scroll}*/
+html {height: 100%;}
+
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/css/fonts/open-sans-v13-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+       url('/css/fonts/open-sans-v13-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/fonts/open-sans-v13-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/css/fonts/open-sans-v13-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('/css/fonts/open-sans-v13-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/css/fonts/open-sans-v13-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/css/fonts/open-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans'), local('OpenSans'),
+       url('/css/fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/css/fonts/open-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/css/fonts/open-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/css/fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+.inner-wrap{min-height:100%; }
+.move-right .mainSection{height:100% !important; overflow:hidden;}
+.move-right .inner-wrap{max-height:100%;}
+.move-right {overflow-y:hidden;position: absolute;top:0;}
+.move-right #accountsidebar {position: relative;}
+#mdc-off-canvas-wrap {overflow-y:hidden;}
+
+#fixedyesno {opacity: 1 !important;}
+
+/* foundation overrides */
+#pagecontainer {padding:20px;}
+.contain-to-grid {margin-bottom:-1px;}
+#sSearch, #tSearch {border:none;box-shadow:none;}
+#tSearch::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #666;
+}
+#tSearch:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #666;
+    opacity:  1;
+}
+#tSearch::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #666;
+    opacity:  1;
+}
+#tSearch:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #666;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder{
+    color: transparent!important;
+}
+.paginationdiv{margin:1rem 0;text-align: center;min-height: 2rem;}
+ul.pagination li a {
+padding: 6px 14px;
+-webkit-border-radius: 0; 
+border-radius: 0;}
+ul.pagination li {
+height:36px;
+background-color: #e5e5e5;
+border-top:1px solid #e7e7e7;
+border-right:1px solid #e7e7e7;
+border-bottom:1px solid #cacaca;
+margin-left:1px;
+}
+ul.pagination li a:hover {background-color: #b7b7b7;}
+div.contentbox,div.cb-left {padding:0;}
+ul.pagination li.disabled {background-color: white;border-top:0;border-right:0;border-left:0;}
+ul.pagination li.disabled a {color:white;}
+
+/*css for new 2015 topnav */
+html {font-size: 16px;}/* fixing root document font size for em and rem measures */
+/* modifications to mdc custom foundation */
+.contain-to-grid {border-bottom: 1px solid #F7F7F7;box-shadow: 4px 0 4px #ccc;}
+/* needed for new foundation mdc tabs ?? */
+.mdcbutton.disabled.secondary, .mdccategorybutton.disabled.secondary {background-color: #999;color: white;}
+.mdcbutton.tiny {padding-left: 0.5rem;padding-right: 0.5rem;}
+.mdcbutton {padding-left: 1rem;padding-right: 1rem;}
+.bar {border-bottom: 1px solid #cacaca !important;position: absolute;bottom:0;width: 100%;min-height: 1px;}
+.navbox .bar {bottom: 2px;}
+.navbox .pagination, #work-year-nav .button-group, #work-client-nav .button-group {display: inline-block;}
+.navbox .pagination {height: auto;} 
+#mainmenu {margin-bottom: 1rem;}
+.navbox, #mainmenu .row {position: relative;}
+/*
+#lXsearch = x button for search
+.Qsearch = magifying glass button
+#Xsearch = x button for mobile search
+*/
+#lXsearch, #Xsearch {cursor:pointer;display:none;}
+#lXsearch, #Xsearch, .Qsearch {
+    position:absolute;
+    right:0px;
+    top: 1px !important;
+    min-height:16px;
+    min-width:16px;
+}
+#lXsearch.mdcMobile, #Xsearch.mdcMobile, .Qsearch.mdcMobile {
+    top: 11px !important;
+}
+@media only screen and (max-width: 59.375em) {
+    #Xsearch, .Qsearch {/*background-color: #f5f5f5;*/top: 9px !important;}
+}
+
+
+.mdcdbmore {margin:.5rem 0 1rem;}
+
+/* iPad [portrait + landscape] */
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+#mainsubnav,#accountsidebar {position: relative;}
+}*/
+/* iPhone [portrait + landscape] */
+/*@media only screen and (max-device-width: 480px) {
+#mainsubnav,#accountsidebar {position: relative;}
+}*/
+
+
+.tooltip {z-index: 99999;}
+.tooltip > .nub {left:25%;}
+
+/* final - sidenav account sub menus */
+#accountsidebar {
+    position: fixed;
+    background: #fff;
+    left: 0;
+    /*top: 60px;*/
+    bottom: 0;
+    /*padding: 20px 0px 0 0px;*/
+    z-index: 2;
+    border-right: 1px solid #F7F7F7;
+    box-shadow: 1px 0px 8px #e5e5e5;
+    overflow-x: auto;
+  } 
+#accountsidebar.show-for-large-up {top:55px;padding: 20px 0px 0 0px;}
+.sidebarheader {margin-top: 0px;}
+.sidebarheader.show-for-large-up {margin-top: 20px;}
+.fa.sidebar-uparrow {border-bottom: 1px solid orange; line-height: 20px;}
+#sidebarheader-upload {
+    /*border-top:1px solid orange;border-bottom:1px solid orange;*/
+}
+#accountsidebar h2,.sidebarheader h2 {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-weight: 500;
+    padding-left: 4px;
+    margin: 2px 0;
+}
+#accountsidebar ul {list-style-type: none;}
+#accountsidebar ul li,.sidebarheader {font-size:.75rem;}
+#accountsidebar ul li {
+    border-left:4px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    }
+#accountsidebar ul li a, .sidebarheader h2 a {display: block;padding:4px 0 4px 6px;color:#66696C;}
+#accountsidebar ul li:not(.sidebarheader) a {padding-left: 1.875rem;}
+#accountsidebar ul li.active a:focus,#accountsidebar ul li a:hover,#accountsidebar ul li a:focus {color:#000;}
+#accountsidebar ul .sidebarheader a,#accountsidebar ul li a:focus,#accountsidebar ul li.active a {color:#2F2F2F;}
+#accountsidebar ul li.active,#accountsidebar ul li:hover {
+    color: #757575;
+    border-left: 4px solid orange;
+    cursor: pointer;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    }
+ #accountsidebar ul li:hover {
+    background-color: #F7F7F7;
+ }
+ #accountsidebar ul li.active {
+    background-color: white;
+    font-weight: 800;
+    }
+#accountsidebar ul li.divider {border-top:1px solid #ECECEC;}
+#accountsidebar ul li.logoutdiv {margin-top:40px;border-top:1px solid #ECECEC;border-bottom:1px solid #ECECEC;}
+#accountsidebar ul li.logout:hover {border-left:4px solid #F7F7F7;}
+#accountsidebar div.hidden {display: none;}
+
+.mdcAccountAlert {text-align: center;line-height:2;position: fixed;width:100%;z-index:9999;}
+.mdcAccountAlert.invisibleSpacer {position: relative;visibility: hidden;}
+.mdcAccountAlert .mdcAccountWarning {background-color: #ffa52b;}
+.mdcAccountAlert .mdcAccountAnnouncement {background-color: #fff8d0;}
+.mdcAccountAlert i {position:relative;top:-1px;}
+.mdcAccountAlert a {color:#000;border: 0;}
+.mdcAccountAlert a:hover {color:#706429;}
+
+.showhidescroll {position: fixed;overflow-y: scroll !important;width: 100%;}/* apply this class to the page body will make the entire body not scrollable while the sidebar is mousedover, to fix problem with jumping page if main div is made not scrollable,
+buggy: on mousein to the sidebar adding this class makes the maindiv jump to top  */
+
+
+.mediumdropdown {padding-top:50px;}
+
+#maincontentdiv {padding-top:50px;}
+
+/* .dropdowndown {left:0 !important;} for testing dropdown */
+
+/* top-bar is the main mdc nav */
+.mega-menu .top-bar {max-width: 1280px !important;}
+
+.mega-menu .f-dropdown.content {margin-top:1px !important;
+    padding: 3% 4% 4% 4%;
+}
+.mega-menu .f-dropdown.content, .mega-menu .search-main,.mega-menu ul.dropdown.mdcabout {
+    /*background-color: #f5f5f5;*/
+    box-shadow: 0px 6px 9px -3px #DEDEDE inset;
+    border-bottom: 2px solid #EAEAEA;
+    border-right: 2px solid #EAEAEA;
+    border-left: 2px solid #EAEAEA;
+}
+
+/* MEDIA QUERIES for responsive topnav
+    Make the mdc logo and drop down topnav menus responsive to screen size
+    NOTE: maincontent height is needed for the off-canvas mobile nav, it displays only to its height; 
+*/
+@media only screen and (max-width: 59.375em) {
+.top-bar {
+    height: 50px;
+    line-height: 50px;}
+}
+@media screen and (max-width: 950px) {
+    .mega-menu #maincontent {min-height: 600px;}
+    .mega-menu .title-area img {margin: 11px 0 0 0px !important;max-width:32px;}
+    .mega-menu .socialsingle {display: none;}
+    .mega-menu .socialmenu {display: inherit;}
+    .mega-menu #tSearch {width: 250px;/*old topnav 250*/}
+}
+/* 951 and above is large desktop size with full top nav */
+@media screen and (min-width: 951px) and (max-width: 1099px) {
+    nav.top-bar .megali {padding: 0 5px;}
+    .mega-menu #maincontent {min-height: 700px;}
+    .mega-menu .top-bar {min-height: 61px;}
+    .mega-menu .title-area {height: 100%;}
+    .mega-menu .title-area img:not(.logo-img-lrg) {margin: 16px 0 0 6px;max-width:90px;}
+    .mega-menu .logo-img-sml {display: inherit;}
+    .mega-menu .logo-img-lrg {display: inherit;
+        margin-right: 0;
+        margin-top: 14px;
+        max-width: 140px;
+    }
+    .mega-menu .socialsingle {display: none;padding-top:5px;}
+    .mega-menu .socialmenu {display: none;}
+    .mega-menu .top-bar-spacer {display: none !important;}
+    .mega-menu #tSearch {width: 150px !important;/*old topnav 250*/}
+    .mega-menu #searchr {width:700px;height:500px;}
+    .mega-menu .search-main {width:700px;margin-left:-540px;height:auto;max-height:500px;}
+}
+@media screen and (min-width: 1100px) and (max-width: 1199px) {
+    .mega-menu #maincontent {min-height: 900px;}
+    .mega-menu .title-area {height: 100%;}
+    .mega-menu .title-area img {margin: 12px 0 0 6px;max-width:180px;}
+    .mega-menu .logo-img-sml {display: none;}
+    .mega-menu .logo-img-lrg {display: inherit;}
+    .mega-menu .socialsingle {display: none;padding-top:5px;}
+    .mega-menu .socialmenu {display: none;}
+    .mega-menu .top-bar-spacer {display: none !important;}
+    .mega-menu #tSearch {width: 180px !important;}
+    .mega-menu .search-main {width:700px;margin-left:-500px;height:auto;max-height:500px;}
+}
+@media screen and (min-width: 1200px) and (max-width: 1299px) {
+    .mega-menu .title-area {height: 100%;}
+    .mega-menu .title-area img {margin: 12px 0 0 6px;max-width:180px;}
+    .mega-menu .logo-img-sml {display: none;}
+    .mega-menu .logo-img-lrg {display: inherit;}
+    .mega-menu .socialsingle {display: none;padding-top:5px;}
+    .mega-menu .socialmenu {display: none;}
+    .mega-menu .top-bar-spacer {display: inherit !important;min-width:20px;}
+    .mega-menu .search-main {width:700px;margin-left:-490px;height:auto;max-height:500px;}
+    .mega-menu #tSearch {width: 180px !important;}
+}
+@media screen and (min-width: 1300px) {
+    .mega-menu .title-area {height: 100%;}
+    .mega-menu .title-area img {margin: 12px 0 0 6px;max-width:180px;}
+    .mega-menu .logo-img-sml {display: none;}
+    .mega-menu .logo-img-lrg {display: inherit;}
+    .mega-menu .socialsingle {display: none;padding-top:5px;}
+    .mega-menu .socialmenu {display: none;}
+    .mega-menu .top-bar-spacer {display: inherit;min-width:35px;}
+    .mega-menu #tSearch {width: 180px !important;}
+    .mega-menu .search-main {width:700px;margin-left:-430px;height:auto;max-height:500px;}
+}
+.mega-menu input#tSearch{text-align: right;padding-right: 1.5rem;}
+.mega-menu .search-main {overflow: hidden;}
+/* note on .mega-menu .search-main:
+extra width for two col results on desktop,
+margin-left should be .mega-menu #tSearch width - width of this property  
+*/
+
+.mega-menu .search-main .search-ul {max-height: 498px;}/* to match new search-main height with 2 pixels buffer to avoid scroll bars */
+.mega-menu .search {height: 61px !important;}
+.mega-menu li.search.has-form > div.row:first-child {height:52px;} /* increase the search box row height to push down search results to line up with bottom of top nav, might be a better way to do this? */
+
+.mega-menu .top-bar-section>ul>li.has-dropdown>a:after {background: none;}
+.mega-menu .top-bar-section .has-dropdown>a {padding: 7px 15px !important;}
+.mega-menu .top-bar-section .has-form {padding:10px 0 0 0;margin: 0 20px;}
+/*.mega-menu .divider {border-right: solid 1px #EAEAEA !important;height:100% !important;}*/
+.mega-menu #tSearch {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 2px 2px 2px 8px;
+    height: 31px;/*old topnav 61*/
+    margin: -6px 0 0;
+    /*background: url(//bayareamodeling.news/i/magni.gif) 98% 50% no-repeat #fff;*/
+    background:none;
+    /*background-color: #FBFBFB;*/
+    border: none;
+}/* tSearch is the desktop search input box  */
+#sSearch {background: none;/*background-color: #f5f5f5 !important;*/height:50px !important;}/* sSearch is the mobile search input box */
+.mega-menu div.mdcTopNavSearchDiv {height:31px;border-bottom:1px solid #cccccc;}/* set the height of the search div (desktop size) */
+.mega-menu div.mdcTopNavSearchDivBB {border-bottom:none;}
+i.fa.fa-search,.top-bar-section ul li>a {
+    color:#272727;
+}
+.hide-for-large-up i.fa.fa-search {
+    font-size: 20px;
+    padding: 8px 10px;
+    line-height: 1rem !important;
+}
+
+.mega-menu .top-bar-section>ul>li.has-dropdown>a:after {
+    background: none !important;}/* not working, gif still loading in customfoundationSCSS */
+
+.mega-menu li.megali a[id^='menu-']{
+    color:black;
+    font-size:.8rem;
+    display: block;
+    padding-top: 7px;
+    font-weight: 500;
+    padding-top:7px !important;
+    text-transform: lowercase;
+    /*letter-spacing: 1px;*/
+    }
+.mega-menu li.megali a[data-dropdown] {letter-spacing: 1px}
+@media screen and (max-width: 980px) {
+    .mega-menu li.megali a[data-dropdown] {letter-spacing: 0px}
+}
+.mega-menu .top-bar-section li:not(.has-form).socialrowbuttons a:not(.button) {background-color: white;}
+
+.mega-menu .top-bar-section ul li.megali:hover:not(.has-form)>a {
+        background: rgba(241, 240, 240, 0.66);
+        border-top:1px solid rgba(241, 240, 240, 0.66);
+    }
+.mega-menu .top-bar-section ul li.has-dropdown:hover:not(.top-bar-nodropdown)>a, .megali>a {
+    height: 61px;
+    } /* set height of top nav button */
+.mega-menu .top-bar-section ul li.has-dropdown:hover:not(.top-bar-nodropdown)>a, .megali>a:hover {background: rgba(241, 240, 240, 0.66) !important;} /* set height of top nav button */
+.mega-menu .top-bar-section li.megali:not(.has-form) a:first-child:not(.button):hover {color: black;background: rgba(241, 240, 240, 0.66);}/* hover on top nav button */
+.mega-menu .top-bar-section li.has-dropdown:hover {}
+.mega-menu .top-bar-section .dropdown {border-right: 1px solid #DCDCDC;border-left: 1px solid #DCDCDC;border-bottom: 1px solid #DCDCDC;}/* mdc old dropdown box, now only used for mdcabout dropdown */
+.mega-menu .top-bar-link {font-size:1.2rem;}
+.mega-menu .top-bar-section ul li.top-bar-nodropdown a {
+        height: 37px;
+        padding-top:0 !important;}
+.mega-menu .top-bar-section ul li.top-bar-nodropdown:hover:not(.has-form)>a {border:1px solid #fff;}
+.mega-menu .top-bar-section ul li.top-bar-nodropdown a:hover {color:#ccc;
+        /*background: rgba(241, 240, 240, 0.66) !important;*/
+        /*border:1px solid #DCDCDC;*/}/* border here appears on social media icons */
+.mega-menu .top-bar-section ul li.top-bar-upload a:hover {color:orange;}
+.mega-menu .top-bar-section > ul {top:0;}
+
+/*f-dropdown is the dropdown content for mega menu*/
+.mega-menu .f-dropdown h4,
+.mega-menu .f-dropdown h5,
+.mega-menu .f-dropdown h6 {letter-spacing: 0;}/* making sure the letter spacing is not affected by newfaces css hacks*/
+.mega-menu .f-dropdown {margin-top:1px !important;border-top:none !important;}
+.megali {padding:0 10px;/*letter-spacing: 1px;*/}
+.megali hr {margin-bottom: 4px;}
+.megali i.fa-caret-right {vertical-align: baseline;}
+.megali .menuAgTiles {
+    text-align: center;
+    margin:1px;
+    border:1px solid #ccc;
+    min-height: 116px;
+    overflow: hidden;
+    font-weight: 600;
+}
+.megali .menuAgTiles a {
+    padding: 36px 16px 16px 16px !important;
+    width: 100%;
+    min-height: 114px;
+    display: inline-block;
+}
+.mega-menu .open {left: 0 !important; /* !important overwrites inline style applied via Foundation JS */ }
+
+.mega-menu .f-dropdown.content h4 {color:black;letter-spacing: 1px;margin-bottom: 4px;}
+.mega-menu .content ul:not(.small-block-grid-3) li {float: none;}/* Remove hover state and background colour from content headings, except for trending menu small grid */
+.mega-menu .content ul.small-block-grid-3 {display:block;}
+.mega-menu .content ul.small-block-grid-3 li  {padding:0 4px 8px 4px;}
+.mega-menu .content[class*="content"] label,
+.mega-menu .content[class*="content"] label:hover {
+            background: none;
+}
+/* Remove Foundation dropdown arrow */
+            .mega-menu .f-dropdown:before,
+            .mega-menu .f-dropdown:after {
+                border-style: none;
+            }
+.mega-menu .f-dropdown li:hover {background:none;border:none;}
+.mega-menu .f-dropdown li {cursor:default;}
+.mega-menu .f-dropdown li a {cursor:pointer;}
+.mega-menu .f-dropdown a:not(.button) {border:none;line-height: .95rem !important;color: black;}
+.mega-menu .f-dropdown ul {top:0;}
+.mega-menu .socialsingle > a,.mega-menu .top-bar-upload > a {padding:0 5px !important;}
+.mega-menu .top-bar-upload {
+    padding-top:3px;
+    margin-left: 10px;
+    border-bottom: 1px solid orange;
+    }
+.mega-menu .top-bar-upload:hover {
+    border-bottom: 1px solid orange;
+    }
+.mega-menu div[id^='menu-'] h4 {font-weight: 600;margin: 8px 0 0 0;}/*final*/
+.mega-menu .newsdropdown ul li {text-align: center;}
+.mega-menu .f-dropdown .valign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.mega-menu .f-dropdown .fullwidthli.mdcTopNavFavorites a {font-size: 1.2rem;padding: 8px 0 !important;}
+.mega-menu .f-dropdown .trendingbox,
+.mega-menu .f-dropdown .newsbox {margin:0px;position:relative;}
+.mega-menu .f-dropdown .Featured-div {padding: 0 2px;}
+/*.mega-menu .f-dropdown .newsbox[class*="-div"] {overflow: hidden;height:120px;}
+cannot use wildcard or it also affects mdx */
+.mega-menu .f-dropdown .newsbox.newfaces-divm {overflow: hidden;height:120px;}
+.mega-menu .f-dropdown .newsbox.Showpackages-div {overflow: hidden;height:160px;}
+.mega-menu .f-dropdown .newsbox.Latest-div {overflow: hidden;height:140px;}
+.mega-menu .f-dropdown .newsbox.Showpackages-div {padding: 0 2px;}
+.mega-menu .f-dropdown .newsimg.Latest {height:140px;overflow: hidden;}
+.mega-menu .f-dropdown .newsimg.NewFaces {height:110px;overflow: hidden;}
+.mega-menu .f-dropdown .newsimg.Featured {height:82px;overflow: hidden;}
+.mega-menu .f-dropdown .mdcTopnavFeaturedTalent h4 {font-size:.85rem;letter-spacing: 0;}
+.mega-menu .f-dropdown .mdcTopnavFeaturedTalent h6 {font-weight: normal;font-size:.65rem;}
+.mega-menu .f-dropdown .trendingimg {position: relative;}
+.mega-menu .f-dropdown .trendingimg img, 
+.mega-menu .f-dropdown .newsimg img {display:block;width:100%;height:auto;opacity:.85;}
+.mega-menu .f-dropdown .trendingimg a h5 {position: absolute; bottom: 0;width:100%;height:100%;opacity:0;
+  font-size: 0.71rem;line-height: 1rem;padding: 2px;margin:0;}
+.mega-menu .f-dropdown .trendingimg a h5:hover {opacity:1;color:black;background-color:rgba(255, 255, 255, 0.9);}
+.mega-menu .f-dropdown .trendingimg a, 
+.mega-menu .f-dropdown .newsimg a {padding:0 !important;}
+.mega-menu .f-dropdown .newsimg {position: relative;}
+.mega-menu .f-dropdown .newsimg a h4 {color: black;padding:0 4px 0 0;}
+.mega-menu .f-dropdown .newsimg a h5 {color: black;padding:0 4px 0 0;font-size:.85rem;font-weight: 600;}
+.mega-menu .f-dropdown .newssectionheader {border-top: 1px solid #E8E8E8;padding:8px 0;}
+.mega-menu .f-dropdown .newsimg h4 {position: absolute; /*bottom: 0;*/width:100%;margin:0;background-color: rgba(255, 255, 255, 1);}
+.mega-menu .f-dropdown .newsimg:not(.Showpackages):not(.Newfaces) h4 {bottom: 0;}
+.mega-menu .f-dropdown .newsimg.mdx h4 {height:20px;font-size: .85rem;font-weight: 600;line-height: 1rem;padding-top:3px;}
+.mega-menu .f-dropdown .newsimg.Latest h4 {height:50px;font-size:.75rem;font-weight: 400;}
+.mega-menu .f-dropdown .newsimg.Newfaces h4 {height: 20px;font-size:.75rem;font-weight: 400;}
+.mega-menu .f-dropdown .newsimg.Showpackages {height: 100%;}
+.mega-menu .f-dropdown .newsimg.Showpackages h4 {/*height:10px;*/font-size:.7rem;font-weight: 400;}
+.mega-menu .f-dropdown .newsimg.Featured h4 {display:none;}
+.mega-menu .f-dropdown #menu-3-talent, .mega-menu .f-dropdown #menu-4-Showpackages {margin-bottom: 8px;}
+
+.mega-menu .f-dropdown .newsimg h5 {position: absolute; bottom: 0;width:100%;height:100% !important;margin:0;opacity:0;}
+
+.mega-menu .f-dropdown .newsimg a h5:hover {opacity:1;color:black;background-color:rgba(255, 255, 255, 1);width:100%;height:100%;padding:8px;}
+/*.mega-menu .f-dropdown .newsimg.mdx h5 {height:30px;}
+.mega-menu .f-dropdown .newsimg.Latest h5 {height:30px;}
+.mega-menu .f-dropdown .newsimg.Showpackages h5 {height:30px;}
+.mega-menu .f-dropdown .newsimg.Newfaces h5 {height:34px;}*/
+.mega-menu .f-dropdown .newsimg:not(.mdx) a h5 {font-size:.65rem;}
+.mega-menu .f-dropdown .newsimg.mdx {height: 180px;overflow: hidden;margin-bottom: 18px}
+.mega-menu .f-dropdown #menu-2-NewFaces {height: 130px;}
+
+.mega-menu .f-dropdown .loadingdiv {text-align:center;width:100%;}/* final */
+.mega-menu .f-dropdown .loadingdiv i {font-size:20px;margin-top:30px;}/* final */
+.mega-menu .f-dropdown div[id^='menu-1-trending-'] {min-height:172px;}/* final */
+
+.mega-menu .f-dropdown ul > li > a {padding:4px !important;
+    font-size: .75rem;
+    font-weight: 400;
+    color: black;}
+.mega-menu .f-dropdown .fullwidthli a {padding: 0 !important;}
+.mega-menu .f-dropdown ul:not(.fullwidthli) > li > a {width:90%;}
+.mega-menu .f-dropdown h3 {margin-bottom: 0;line-height:.85;}/* final */
+
+.mega-menu .lsidethumbs {padding-right: 10px;}
+.mega-menu .rsidethumbs {padding-left: 10px;}
+.mega-menu .top-bar-section li.megali h4 a {display: inline;padding:0;vertical-align: middle;}
+.mega-menu .top-bar-section li.megali h4 a:hover {color:#999;}
+.mega-menu #menu-2-mdx div.newsbox {/*margin-right:4px;*/}
+
+/* topbar social media buttons */
+.mega-menu .top-bar-section ul li.socialsingle a,.mega-menu .top-bar-section ul li.socialmore a {color: #989898;font-size: 1.1rem;}
+.mega-menu .top-bar-section ul li.socialsingle.mdc-social-fa a:hover,.mega-menu .top-bar-section ul a.mdc-social-fa:hover {color: rgba(59, 89, 152, 0.75);}
+.mega-menu .top-bar-section ul li.socialsingle.mdc-social-tw a:hover,.mega-menu .top-bar-section ul a.mdc-social-tw:hover {color: rgba(0, 172, 237, 0.75);}
+.mega-menu .top-bar-section ul li.socialsingle.mdc-social-ig a:hover,.mega-menu .top-bar-section ul a.mdc-social-ig:hover {color: rgba(18, 86, 136, 0.75);}
+.mega-menu .top-bar-section ul li.socialsingle.mdc-social-yt a:hover,.mega-menu .top-bar-section ul a.mdc-social-yt:hover {color: rgba(229, 45, 39, 0.75);}
+.mega-menu .top-bar-section ul li.socialsingle.mdc-social-wb a:hover,.mega-menu .top-bar-section ul a.mdc-social-wb:hover {color: rgba(230, 22, 45, 0.75);}
+.mega-menu .top-bar-section li.socialrowbuttons, #MDCMobileMenuTabsMDCMobileMenuTabsMDCMobileMenuTabs #HelpTab li.socialrowbuttons {display:flex;background-color: white;}
+.mega-menu .top-bar-section li.socialrowbuttons a, #MDCMobileMenuTabs #HelpTab li.socialrowbuttons a {display:inline;text-align: center;border:none;}
+.mega-menu .top-bar-section li.socialrowbuttons:hover,.mega-menu .top-bar-section li.socialrowbuttons a:hover {border:none;background-color: white;}
+#MDCMobileMenuTabs #HelpTab ul li:not(.socialrowbuttons) a {padding-left: 0;}
+#MDCMobileMenuTabs #HelpTab ul li.socialrowbuttons a.mdc-social-fa {padding-left: 0 !important;}
+#MDCMobileMenuTabs #HelpTab ul li.socialrowbuttons a {font-size:1.4rem;}
+
+#MDCMobileMenuTabs li {border-bottom:1px solid #fff;}
+
+#MDCMobileMenuButtons li:not(.left-off-canvas-toggle) {text-align: center;padding:0 0.625rem;min-height:1px;}
+#MDCMobileMenuButtons li.left-off-canvas-toggle {text-align: right;padding: 0 0.625rem;}
+#MDCMobileMenuButtons li:not(.left-off-canvas-toggle) i {font-size:1.5rem;}
+#MDCMobileMenuButtons li.left-off-canvas-toggle i {font-size:1.5rem;opacity: .8;}
+
+#MDCMobileTopNavButtons {top: 50%;}
+
+.MDCLoginPrompt {
+    text-align: center;
+    padding: 8%;
+    margin-top: 10%;
+}
+
+@media only screen and (min-device-width: 1024px) {li.has-dropdown.mdcabout {margin-right: 20px;}}
+.mega-menu .top-bar-section li.has-dropdown.mdcabout > a {padding: 0 22px !important;font-size: 1.2rem;}
+.mega-menu .top-bar-section li.mdcabout {
+    margin-left:8px;
+    /*border-left:1px solid #F7F7F7;
+    border-right:1px solid #F7F7F7;*/
+    }
+ul.dropdown.mdcabout {
+    width:300px;
+    padding: 20px;
+    background-color: white;}
+.mdcaboutacct {background-color:#F7F7F7;padding: 6px;font-size:.7rem;margin-bottom: 6px;}
+.mdcaboutsectionhead {font-size: .8rem;color: #666;}
+.mega-menu .top-bar-section li.divider {border-top:2px solid #666;}/*final*/
+
+.tab-bar .fi-list {font-size: 1.6rem;font-weight: 400;padding: 4px 12px 0 12px;}
+.tab-bar .fi-torso {font-size: 1.1rem;padding:0 6px;}
+.tab-bar {font-size: .75rem;}
+.floatleft {float: left;}
+
+.sidenavname {font-size:.75rem;padding-top: 7px !important;}
+
+.mdcinfo {margin:14px 0;color:#808080;}/* info panel on account pages */
+.mdcinfo, .mdcinfo p {font-size: .9rem;}
+.mdcinfo h3 {font-size:1rem;font-weight: 800;}
+.fi-x {color:white;}
+.x-redbox {background-color: red;width:16px;height:16px;}
+#pagecontainer i.fa.fa-close, #pagecontainer i.fa.fa-times {color:red;vertical-align: baseline;}
+
+.canGrab {cursor: moz-grab;cursor: -webkit-grab;cursor:grab;}
+
+.grab-o-col {text-align: center;padding-top:10px;}/* for moveable divs with hand grab icon */
+.agencyFeatDel {padding-top: 25px;}/* x box on agency featured images */
+
+.mega-menu .spacerleft {min-width:40px;max-width:200px;height:61px;}
+.mega-menu .spacer {width:50px;height:61px;}
+/*@media only screen and (min-width: 59.438em) {
+    .top-bar-section ul.search-col1, .top-bar-section ul.search-col2 {width: 50%;float:left;top:0;}
+}*/
+.top-bar-section .search-ul ul {top:4px;}
+.search-main .search-ul li .results.catDivider {background-color: #F7F7F7;font-size: .9rem;padding: 5px 20px;}
+.search-main .search-ul li .results {margin:0;padding:5px;width:100%;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;-webkit-flex-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.search-main .search-ul li .results.noResults {padding:2px 5px;}
+.search-main .search-ul li .results.noResults div {width:100%;text-align: center;font-style: italic;color:#999;}
+.search-main .search-ul li {border-bottom: #f0f0f0 4px solid;}
+.search-main .search-ul li a {border:none;}
+.search-main .search-ul li a div {display: inline-block;}
+.search-main .search-ul .search-col1,.search-main .search-ul .search-col2 {width: 50%;float:left;}
+.search-main .search-ul .search-col1 img,.search-main .search-ul .search-col2 img {width:80px;height:80px;display:inline;}
+.search-main .search-ul .search-col1 {border-right: #f0f0f0 2px solid;}
+.search-main .search-ul .search-col2 {border-left: #f0f0f0 2px solid;}
+.mega-menu .search-main .search-ul {background-color: #F7F7F7;}
+
+/*#AS_ResultsHolder .search-main .search-ul li.catCol1, .search-main .search-ul li.catCol2 {width: 50%;}
+#AS_ResultsHolder .search-main .search-ul li.catCol1 {margin-left: 0;}
+#AS_ResultsHolder .search-main .search-ul li.catCol2 {margin-left: 50%;}*/
+
+
+/* account pages css */
+#notificationlocation {min-height: 275px;margin:30px 0;}
+#notificationlocation .notificationheader {padding:20px 0;}
+.notificationlog table {border:none;}
+.notificationlog table a {color:#706429;}
+.notificationlog table a:hover {color:#ccc;}
+
+/* OFF CANVAS CSS also includes common tab css for search pages for id #SearchTopTabs */
+
+    /*
+    form elements buttons:
+        div #formdiv
+            <ul using even-n if you want evenly spaced out n buttons
+            <li>
+                input or a
+                label with class .button
+    -*/
+    /* search pages css */
+    #ui-datepicker-div {height: 240px;}
+    #formdiv .ui-datepicker-calendar {display: table !important;}
+    #formdiv .ui-widget-header {background: none !important;}
+    .ui-datepicker-title select {
+    font-weight: 400;
+    padding: 0 .2rem;
+    font-size: .9em;
+    }
+
+    .p-leftinfo .affDisabled {opacity: .3; position: relative;}
+/*    .p-leftinfo .affDisabled a:before {content: '* ';display: inline-block; font-style: italic;white-space: pre;}*/
+    .p-leftinfo .affDisabled:after {content: '* hidden from public';display: block; font-style: italic;}
+
+    /* div#searchSwitches includes the video and favorites buttons on search and f_people_detail */
+    #searchSwitches .button-group, #formdiv .button-group {width:100%;}
+    #formdiv .button-grouped {display: table-cell;}
+    #searchSwitches {
+    z-index: 8;
+    }
+    @media screen and (max-width: 900px) {
+        #searchSwitches {
+            padding-left: 8px;
+        }
+        #peopleDetail #searchSwitches {
+            padding-left: 8px;
+        }
+        .mdcClients #searchSwitches {
+            padding:1rem;
+        }
+    }
+    @media screen and (min-width: 901px) {
+        #searchSwitches {
+            top: 60px;
+        }
+        #peopleDetail #searchSwitches {
+            top: 30px;
+        }
+        .mdcClients #searchSwitches {
+            top: -20px !important;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        #searchSwitchesFavorites {padding-left: 8px;}
+    }
+
+    #searchSwitches input[data-toggle], #formdiv input[data-toggle] { display: none; }
+    #searchSwitches label[disabled] {opacity: .4;}
+
+    #formdiv input[data-toggle]:checked + label,
+    #formdiv input[data-toggle]:checked + label:active,
+    #formdiv a.mdcsearchDateRangeSelected,
+    #searchSwitches input[data-toggle]:checked + label,
+    #searchSwitches input[data-toggle]:checked + label:active { 
+      background-color:#ececec;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    @media screen and (max-width: 35em) {
+        #clientWorkListDiv .button-group {background-image: url("//i.mdel.net/i/tab-back.gif");}
+    }
+    #searchSwitches .button-group.toggle li:not(:first-child),
+    #formdiv .button-group.toggle li:not(:first-child) {
+      margin: 0 -0.8rem; }
+    #searchSwitches .button-group.toggle li:first-child,
+    #formdiv .button-group.toggle li:first-child {
+      margin: 0 -0.8rem; }
+    #searchSwitches .button, #formdiv .button  {
+        padding: 0.6rem .9rem;
+        font-size: .8rem;
+        background-color: #fff;
+        border: 1px solid #bdbdbd !important;
+    }
+
+    @media screen and (min-width: 901px) {
+        #searchSwitches .button:hover, #formdiv .button:hover {background-color:#ccc;}
+    }
+    #searchSwitches .button[disabled]:hover, #formdiv .button[disabled]:hover {background-color:#fff;}
+
+    #searchTypeDropdown a.button {background-color: white;
+    border-bottom: 1px solid #c1c1c1;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight:600 !important;}
+    #searchTypeDropdown a.button i {margin-left:.5em;}
+    #SearchTopTabs ul.ui-tabs-nav li a {padding:1em 1em;}
+    .mdcsearchDropdown {max-height:300px !important;overflow: auto;}
+    .mdcsearchResultsRow {margin:1em auto;border-bottom: 1px solid #e8e8e8;padding: 1em;}
+    .mdcsearchResultsImg {min-height: 190px;}
+    .mdcsearchHalfOpacity {opacity:.5;}
+    .mdcSearchViewingText {font-size: .75em;margin-top:8px;}
+    .mdcSearchViewingText span {font-weight: normal;background-color: #f5f5f5;border:1px solid #d3d3d3;padding:4px;color:#5a5a5a;line-height: 2rem;}
+    .mdcSearchViewingText a {color: black;padding: 5px;vertical-align: sub;}
+    .mdcSearchViewingText a i {font-size:1.4em;}
+    #mdcsearchResultsDiv {position: relative;}
+    #mdcsearchResultsLoadingDiv {
+        display:none;
+        top: 100px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        font-size: 3em;
+        color: black;
+    }
+    .mdcsearchResultsLoading {display:block !important;}
+    #formdiv #mdcsearchButton.button {background-color: #e0f7ae;}
+    #formdiv #mdcsearchButton.button:hover {background-color: #caec81;}
+    #formdiv input#mdcsearchClearButton {
+    font-size: .7rem;
+    border: none !important;
+    text-decoration: underline;
+    padding: .2rem;
+    margin: 0;
+    }
+    #formdiv #mdcsearchButtonDivRow {margin-top:20px;}
+    #formdiv .buttonscentered {text-align: center;}
+    #SearchPeopleTab:not(.ui-tabs-active) {display: none;}
+    .peopleTabApp .mdcnoresults {
+      padding: 2.5em;
+      text-align: center;
+    }
+    .peopleTabApp .loadingDiv {
+        text-align: center;
+    }
+    .peopleTabApp .mdcloading {
+      font-size: 2em;
+    }
+    .peopleTabApp select{
+      font-size: 16px;
+      height:auto;
+    }
+    .peopleTabApp h4,
+    .peopleTabApp select {
+        margin-top:30px;
+    }
+    .peopleTabApp .formDropDownDiv {
+        padding:8px;
+    }
+    .mdcTinyText {
+        font-size:.8em;
+    }
+    .peopleTabApp .peopleTabAppResults {
+        margin-top:20px;
+    }
+    .peopleTabApp #formdiv .button-group.toggle li:first-child {
+        margin:0;
+    }
+    #formdiv .button.success {color: black;}
+    #formdiv .has-tip,.has-tip:hover {border:none;margin:0;}
+    #formdiv .mdcdate-buttons .button {margin:0;font-size: .85rem;padding:.8rem;}
+    #formdiv .tokenize-sample { width: 100%; }
+    #formdiv div.Tokenize ul.TokensContainer {height: auto;}
+    #formdiv div.Tokenize ul li span.jSonSearchSpan {margin-left: 1rem;font-size: .8rem;}
+    #formdiv .jSonSearchImg {width: 50px;height: 50px;}
+    #formdiv .jSonSearchImgC {width: 30px;height: 30px;}
+    #formdiv .ui-datepicker-calendar {display: none;}
+    #formdiv #campaignTypeButtons {padding-left:5px;}
+
+    #mdcsearchGenderButtonsDiv li {margin:0 !important;}
+    .userInfoMessageDiv {text-align: center;padding:1rem;} /* style for user messages info box */
+    .userInfoMessageDivContainer {padding: 2rem;}
+
+    @media screen and (max-width: 900px) {
+        #mdcsearchCampaignTypeButtonsDiv {margin-top: 16px;}
+        #campaignTypeButtons {
+            width: 100%;
+            list-style: none;
+            position: relative;
+            float: left;
+            display: block;
+        }
+        #campaignTypeButtons li {
+            float:none;
+            display: block;
+            position: relative;
+            right: -5%;
+            max-width: 100%;
+        }
+        /*#campaignTypeButtons li input[data-toggle] {display: inline;margin:0;}*/
+        #campaignTypeButtons.button-group .button {
+            margin:0;
+            border-top: 1px solid #bdbdbd !important;
+            border-left: 1px solid #bdbdbd !important;
+            border-right: 1px solid #bdbdbd !important;
+            border-bottom:none !important;
+            width:100%;
+        }
+        #campaignTypeButtons.button-group>:first-child>.button{
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        #campaignTypeButtons.button-group>:last-child>.button,#campaignTypeButtons.button-group>:nth-last-child(2)>.button {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom: 1px solid #bdbdbd !important;
+        }
+        #formdiv #campaignTypeButtons li.showsli {margin-top:20px;}
+    }
+    @media screen and (min-width: 901px) {
+            #formdiv #campaignTypeButtons li.showsli {margin-left:20px;}
+    }
+    /* mdc styles for off-canvas tabs + some common search pages elements */
+    #AgenciesDirectory,#TalentDirectory {display: none;}/* init load of mobile directory tabs hidden */
+    li.ui-state-default.ui-state-hidden[role=tab]:not(.ui-tabs-active) {
+        display: none;
+    }
+    .mobilelogo img {opacity: .2;max-height: 30px;}
+    #MDCMobileMenuTabs {background-color: #f1f1f1;}
+    #MDCMobileMenuTabs,#SearchTopTabs {border: none;}
+    #MDCMobileMenuTabs ul#tabs,#SearchTopTabs ul#tabs {
+        width: 100%;
+        border: none;
+        background: #f1f1f1;
+        border-bottom: 1px solid #ccc;
+    }
+    #MDCMobileMenuTabs ul,#SearchTopTabs ul, #MDCMobileMenuTabs li,#SearchTopTabs li {border-radius: 0;}
+    #MDCMobileMenuTabs ul li a {line-height: 30px;}
+    #MDCMobileMenuTabs ul li.sidebarheader {margin:20px 0 4px 0;border-bottom: 2px solid black;}
+    #MDCMobileMenuTabs ul li.sidebarsubheader a, 
+        #MDCMobileMenuTabs #TalentMenu ul li a,
+        #MDCMobileMenuTabs #AgenciesMenu ul li a,
+        #MDCMobileMenuTabs #AccountMenu ul li a {margin-top:16px;color:black;}
+    #MDCMobileMenuTabs div#NewsTab ul li.sidebarheader a {color:black;padding: 0;}
+    #MDCMobileMenuTabs div#NewsTab > ul > li:nth-child(1) {margin: 0 0 4px 0;}
+    #MDCMobileMenuTabs div#DirectoryTab a,
+    #MDCMobileMenuTabs div#SettingsTab a {color: black;}
+    #MDCMobileMenuTabs ul li:not(.sidebarheader) a {/*padding-left: 1.875rem;*/}
+    #MDCMobileMenuTabs div ul li:not(.sidebarheader) a {padding-left: 0;}
+    #MDCMobileMenuTabs div#NewsTab ul li a img {border: 1px solid #5d5d5d;}
+    #MDCMobileMenuTabs .MDCMobileMenuItems ul li.active,
+    #MDCMobileMenuTabs .MDCMobileMenuItems ul li:hover,
+    #SearchTopTabs ul.ui-tabs-nav li.active {
+        color: #757575;
+        /*border-left: 4px solid orange;*/
+        cursor: pointer;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+    }
+    #SearchTopTabs ul.ui-tabs-nav li:not(.ui-tabs-active) {background:#f5f5f5;}
+    #MDCMobileMenuTabs .firsttab {margin-left: 12px !important;}
+    #MDCMobileMenuTabs div#DirectoryTab .activetoggle {border-bottom: 2px solid black !important;}
+    #MDCMobileMenuTabs div#DirectoryTab h2 a:not(.activetoggle) {color: #999;}
+    #MDCMobileMenuTabs div#DirectoryTab h2 {/*padding:0 .5rem 0 .5rem;*/}
+    #directoryrow {margin-top:1rem;}
+    li.offcanvasupload {text-align: center;}
+    li.offcanvasupload i {/*padding-top:10px;*/}
+    .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list li.offcanvasupload a {border: 1px solid #ccc !important;
+    width: 35.58px;
+    height: 34px;
+    margin-top: 9px;}
+    li.offcanvasx i.fa.fa-times {
+    font-size:16px;
+    border: 1px solid #D4D4D4;
+    padding: 8px 10px;
+    margin: 4px 4px 4px 0;
+    float: right;}
+    #MDCMobileMenuTabs h4 {font-size: .7em;padding-right: 4px;font-weight: normal;}
+    #MDCMobileMenuTabs h5 {font-size: .6em;padding-right: 4px;overflow: hidden;}
+    nav.tab-bar {background-color: #f1f1f1;}
+    #mobilestatus {text-align: center;}
+    .mobileLoggedinas,
+    .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list div.mobileLoggedinas a {
+        font-size: .75rem;color:#666;padding:0px;
+    }
+    .mobileLogout {text-align: right;}
+    .mobileRegLogin {
+    padding: 8px;
+    margin: 12px auto;
+    max-width: 180px;
+    font-size: .8em;}
+    .mobileRegLogin a {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    color: #827430;}
+    #MDCMobileMenuTabs ul li.trendingbox {padding-bottom:0;}
+    #MDCMobileMenuTabs ul li div.trendingimg a {padding-left:0;}
+    /* default styles for off-canvas tabs with mdc mods */
+    .top-bar .menu-icon {
+    right: 0;
+    top: 50%;
+    margin-top: -28px;
+    padding-left: 20px;
+    position:absolute;
+    text-transform: uppercase;
+    }
+    .menu-icon a {
+    height: 50px;
+    line-height: 49px;
+    padding: 0 5px 0 0;
+    color: #999;
+    position: relative;
+    display: inline-block;
+    font-size: 0.875rem;
+    }
+    .menu-icon a i, .mdcTopNavMenui {
+    color: #272727;
+    font-size: 20px !important;
+    line-height: 1rem !important;
+    margin-top: -2px;
+    }
+    .menu-icon a i {padding: 8px 10px;}
+    .mdcTopNavMenui {padding: 11px 10px 8px 10px;}
+
+    .userbadgeContainer {
+        padding-top:0px !important;
+        display:block !important;
+    }
+    .userbadgeContainerMobile {padding-top: 7px !important;}
+    .userpic {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        margin-top: -4px; 
+    }
+    .userbadge { 
+        width: 40px;
+        height: 40px;
+        white-space: inherit !important;
+        font-size: .65em !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        text-align: center;
+        line-height: 40px !important;
+        background-color: white !important;
+        overflow: hidden;
+    }
+    .userbadgeContainerMobile .userpic {margin-top:-16px;}
+    .userbadgeContainerMobile .userbadge {
+        width: 32px;
+        height: 32px;
+        line-height: 32px !important;
+    }
+
+    .sidenav-left-off-canvas-menu .zurb-links ul.pillars li a {
+      padding: 0 !important; }
+
+    .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu {
+      -webkit-backface-visibility: hidden;
+      background: #f1f1f1;
+      bottom: 0;
+      box-sizing: content-box;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: absolute;
+      transition: transform 500ms ease 0s;
+      width: 13.88889rem;
+      z-index: 1001;
+      -webkit-transform: translate3d(-103%, 0, 0);
+      -moz-transform: translate3d(-103%, 0, 0);
+      -ms-transform: translate(-103%, 0);
+      -o-transform: translate3d(-103%, 0, 0);
+      transform: translate3d(-103%, 0, 0);
+      left: 0%;
+      top: 0;
+      width: 97%;
+      box-shadow:1px 0px 8px #e5e5e5;}
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu * {
+        -webkit-backface-visibility: hidden; }
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu hr {
+        border-color: #444444;
+        margin: 5px 0 10px 0 !important; }
+      /*.sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu ul.off-canvas-list {padding-top:25px;}*/
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list li.gs {
+        padding: 0 1.08rem;
+        margin-top: 8px; }
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list #tabs li a {font-size: .7rem;padding:.3rem .65rem;}
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list #tabs li.ui-state-active a {border: 1px solid #cacaca;}
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list #tabs li.ui-state-active {border:none;background:#f1f1f1;}
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list #tabs li.ui-state-default:not(.ui-state-active) {
+            border:none;
+            background: #e5e5e5;
+        }
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list li a {
+        border-bottom: none !important;
+        font-size: .9rem;
+        padding: 0.3rem;
+        /*color:black;*/
+        color: #66696C;
+        font-weight: 500; }
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list .mobilemenu li a {
+        font-size: 1rem;}
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list li label {
+        background: none !important;
+        border-top: none !important;
+        padding: 0.4rem 0.95rem  0.4rem 0.95rem !important;
+        font-size: 0.775rem !important; }
+      .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu .off-canvas-list li label.first {
+        padding-top: 0.75rem !important; }
+    .sidenav.off-canvas-wrap.move-right > .inner-wrap {
+      -webkit-transform: translate3d(100%, 0, 0);
+      -moz-transform: translate3d(100%, 0, 0);
+      -ms-transform: translate(100%, 0);
+      -o-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0); }
+    .sidenav.off-canvas-wrap.move-right a.exit-off-canvas {
+      -webkit-backface-visibility: hidden;
+      box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background 300ms ease;
+      -webkit-tap-highlight-color: transparent;
+      background: rgba(255, 255, 255, 0.2);
+      bottom: 0;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1002; }
+      @media only screen and (min-width: 35.61111em) {
+        .sidenav.off-canvas-wrap.move-right a.exit-off-canvas:hover {
+          background: rgba(255, 255, 255, 0.05); } }
+    .sidenav.off-canvas-wrap.move-left > .inner-wrap {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      -moz-transform: translate3d(-100%, 0, 0);
+      -ms-transform: translate(-100%, 0);
+      -o-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0); }
+    .sidenav.off-canvas-wrap.move-left a.exit-off-canvas {
+      -webkit-backface-visibility: hidden;
+      box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background 300ms ease;
+      -webkit-tap-highlight-color: transparent;
+      background: rgba(255, 255, 255, 0.2);
+      bottom: 0;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1002; }
+      @media only screen and (min-width: 35.61111em) {
+        .sidenav.off-canvas-wrap.move-left a.exit-off-canvas:hover {
+          background: rgba(255, 255, 255, 0.05); } }
+
+    .lt-ie10 .sidenav.off-canvas-wrap .sidenav-left-off-canvas-menu {
+      left: -84%; }
+    .lt-ie10 .sidenav.off-canvas-wrap .sidenav-right-off-canvas-menu {
+      right: -84%; }
+    .lt-ie10 .sidenav.off-canvas-wrap.move-left > .inner-wrap {
+      right: 84%; }
+    .lt-ie10 .sidenav.off-canvas-wrap.move-right > .inner-wrap {
+      left: 84%; }
+
+
+@media only screen and (max-width: 59.375em) {
+    #maincontentdiv {padding-top:0;}
+}
+
+/*  this is needed or the qtip window ends up too narrow and the layout breaks */
+#qtip-popup {min-width: 400px;}
+
+/* styles for rankings badges */
+.rankbadge {
+    width: 50px;
+    height: 50px;
+    white-space: inherit !important;
+    font-size: 11px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    text-align: center;
+    line-height: 50px !important;
+    background-color: white !important;
+    /*border-color: black !important;*/
+    margin-bottom: 4px;
+}
+.rankbadge:not(.rankbadgeprev):hover {background-color:  rgb(0 0 0 / 1%) !important;}
+.rankbadge:not(.rankbadgeprev) .rankname {text-decoration: underline;}
+/*.rankbadge a {color: white !important;}*/
+.rankbadgeprev {color: #c1c1c1 !important;border-color: #d4d4d4 !important;background-color: white !important;}
+.rankname {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-top: -4px;
+}
+
+/* styles for favorites. */
+
+.favorites-thumbs-x {position:relative;top:20px; left:60px;z-index:100; background-color:#FFF; padding: 0px; margin:0px;width:16px;}
+.input-spacer {width: auto;height: 10px;clear: both;}
+span.right-size {display: inline-block;width: 150px;}
+.favorites-listrow, .assoc_row.linkit {border-bottom:1px solid #ccc;padding:.5rem;cursor:pointer;}
+.favorites-listrow:hover, .assoc_row.linkit:hover {background-color: #f7f7f7;}
+.deleteFavoriteButton {z-index: 1000;}
+.smallStatusDiv {font-size: .5rem;padding:.5rem 0 0;}
+.favoritesubmitted {opacity: .6;}
+.favoriteslist-actions i {color: #666666;display: inline-block;}
+.favoriteslist-actions i:hover {color: #000;}
+.favoriteslist-actions img {padding: 0 0 0 .5rem;}
+
+
+.favrefreshrow {padding:12px 0;}
+.favrefresh {
+    width: 48px;
+    height: 48px;
+    white-space: inherit !important;
+    font-size: 1.2em !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    text-align: center;
+    line-height: 48px !important;
+    background-color: white !important;
+}
+.favrefreshicon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-top: -20%;
+}
+.favrefreshicon a {color: #555;}
+
+i[class^='fa fa-bookmark'] {
+    font-size:1.5em !important;
+}
+.mdcsearchResultsImg {    
+    padding: 3px;
+}
+.imagecontainer {
+    /*height: 75%;
+    position: relative;*/
+    overflow: hidden;
+}
+.imagecontainer img {
+    /*position: absolute;
+    left: -9999px;
+    right: -9999px;*/
+    margin: auto;
+    /*min-width: 100%;
+    max-width: 390%;
+    min-height: 100%;*/
+    width: auto;
+}
+.noimage {
+    background-color: #f1f1f1;
+    height:62%;
+}
+.itemcontainer {
+    border: 1px solid #999;
+    padding:12px;
+    min-height: 560px;
+    overflow: hidden;
+}
+@media only screen and (min-width: 40.063em){ /*medium +*/
+	#mdcsearchResultsDiv .itemcontainer {
+    	max-height: 560px;
+    }
+}
+.prevnextbuttons {
+    clear: both;
+}
+.dbnewsfeednav {
+    top:inherit !important;padding: 16px 10px 8px 10px;
+    position:fixed;
+    max-width: 1012px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+.dbnewsfeednav .f-dropdown {
+    max-width: 300px;
+}
+.dbnewfeednavbg {
+    height: 90px;
+}
+.mdcfavdropdown {
+    margin:0;
+}
+#mdcfavvideobuttondiv {
+    padding-right:12px;
+}
+.mdcvideobuttonlabel {
+    margin-right:0 !important;
+}
+.mdcfavdropdownsepar {
+    border-bottom:1px solid #eee;
+}
+
+.favDivImgContainer {background-size: cover;background-position: center top;position: relative;}
+.favDivImgContainer img {width: 100%;}
+
+
+/* styles for people detail */
+#peopleDetail #nameBox h3 {font-size: 3em;white-space: nowrap;}
+.mdcmessage {
+    /*border: 1px solid #a3a3a3;*/
+    background-color: #efefef;
+    max-width: 80%;
+    margin: 16px auto;
+    text-align: center;
+    font-size: .6875rem;
+    padding: .625rem 1.25rem .6875rem;
+    width: 100%;
+}
+.addAgencyRepresentation{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+.mdcErrorMsgText{
+    color: darkred;
+}
+#peopleDetail div.con-box-img {display: inline-block;}
+#peopleDetail .peopleWorkDetails {padding-left: 5px;}
+#peopleDetail i.fa-close, #peopleDetail i.fa-times:not(.MOTYclose) {color:red !important;}
+a.removeAgencyRep {margin-left: 10px;}
+@media only screen and (max-width: 59.375em) {
+    a.removeAgencyRep {margin-left: 20px;}
+    #peopleDetail #bIsearch {right:40% !important;}
+}
+.removedAgencyStrikethrough {text-decoration: line-through;}
+
+.EditButtonRow button.ui.basic.button {width: 100%;padding: .5rem;line-height: 1.5rem;font-size: .9rem;}
+.EditButtonRow .ui.basic.button.submit {background-color: #D2FFCF !important;}
+.EditButtonRow .ui.basic.button .FAButton {padding: 0 .3em 0 0;}
+.EditButtonRowElement {grid-row: 1;}
+#model-left > .EditButtonRowElement {margin-top: 5px;}
+#model-left > .EditButtonRowElement button {font-size: .9rem;}
+.EditButtonRow {display: grid;grid-gap: 2px;margin-top: 5px;height: 40px}
+.EditButtonRow.editWorkRow {margin-bottom: 10px;}
+.EditButtonRow.split50 {grid-template-columns: 50%;}
+.EditButtonRow.split30 {grid-template-columns: 33%;}
+.EditButtonRowElement .mdcPlaylistsButton span:nth-child(2) {font-size: .9rem;}
+.EditButtonRowElement .button {margin: 0;}
+@media screen and (max-width: 1020px) {
+	#model-left {margin: 3px 2px 16px;}
+	#p-namediv > div {margin: 0 10px;}
+}
+
+/* styles for common elements, headers for detail pages */
+
+.FAButton {/* style for inputs using font-awesome, like favorite button */
+    border: 0;
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 0 .5em;
+    cursor: pointer;
+}
+.FAMessage {font-size: .7rem;}
+.workSliderThumbs .th {max-width: 88px;}/* used for video thumbnails on work_details
+as of March 28 2016 we doubled the size of 50tn and 80tn size thumbnails, so they appear larger unless the div size limit is set
+set to 88 for 80px wide + 4 margins
+or increase the size of all displayed thumbnails to 160 (stretching the 80 px ones) BUT then there are display issues to fix:
+(play button overlay and placement for videos and pre/next thumbnails nav on work details)
+ */
+
+#nameBox h1 {font-size:3rem;padding: 1rem 0;}/* used on client_detail */
+#clientHeader .lineupNameBox {padding: 2.3rem 0 1rem 0;}
+#clientHeader #socialBox {padding-left: 2rem;padding-right:2rem;}
+@media only screen and (max-width: 65em) {
+	#clientHeader #nameBox {padding-left: 1rem;}
+    #clientHeader .lineupNameBox {padding: 2.5rem 1rem 1rem 0;}
+    }
+#socialLinks a {color: black;}
+#socialLinks a  i {color: #999;font-size: 1.3rem;}
+#socialLinks a  i {padding:.4rem .2rem .4rem 0;}
+#socialLinks a:hover  i {color: black;}
+#socialLinks ul {list-style: none;}
+
+#socialLinks img.png {opacity: .4;height: 20px;width: 20px;}
+#socialLinks a:hover img.png {opacity: 1;}
+/* foudnation override for joyride styles*/
+.joyride-expose-wrapper {mix-blend-mode: overlay;}
+
+/* account styles from adminSM.css */
+.favorites-listheader, .agImg-listheader, .assoc-listheader, .editorSection-header {
+    border-bottom:1px solid #ccc;padding: 40px 0 30px 0;font-size: 1.4rem;
+}
+/** START: Global Classes **/
+.overflow {position: relative;overflow: hidden;}
+.borderbox {border: 1px solid #cfcfcf;}
+.mdcAccount strong { font-weight: bold; }
+.mdcAccount p {line-height: 1;}
+/** END: Global Classes **/
+
+
+
+/** START: global mdc misc classes */
+.thumbHolder {position: relative;display: inline-block;}
+/*.videoPlay:before {position: absolute;top:0;left:0;height: 100%;width: 100%;background-image:url('https://i.mdel.net/i/db/transBack.png');content: " ";}*/
+.videoPlay:after {position: absolute;top:0;left:0;height: 100%;width: 100%;background-image:url('https://i.mdel.net/i/db/play-md.png?v=wh');background-position: center;background-repeat: no-repeat;content: " ";}
+/** END: global mdc misc classes */
+.mdcCardBackWorkCol .videoOverlay img {border:none;}
+
+/* merging in styles from mdcdb css f_style-2015.css?10 */
+/* edit buttons */
+
+.EditButton {
+    border-color: #827430;
+    border-style: dotted none;
+    border-width: 1px 0;
+    background-color: white;
+    color: #827430;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+/** START: ACCOUNT pages **/
+.accountIntroButton {
+    color: #66696C;
+}
+.accountIntroButton i {
+    color:white;
+    padding:.4em;
+    font-size:.8em;
+    vertical-align: bottom;
+}
+.IntroButton {
+    background-color: orange;
+    display: inline-block;
+    width:1.6em;
+    height: 1.6em;
+    text-align: center;
+}
+.accountIntroButton a h3, .accountIntroButton div h3 {color:#333;margin: 35px 0 8px 0;}
+.accountIntroButton a:hover h3 {color:#ccc;}
+.accountIntroButton a:hover h3 div.IntroButton {background-color: #ccc;}
+.accountIntroButton h3.help {font-size: 1em;}
+#accountMobileDropdown {text-align: center;}
+#accountMobileDropdown .mdcdropdown {
+    margin: 24px auto 0 auto;
+    width: 90%;
+}
+#accountMobileDropdown h2 {font-size: .9rem;}
+#accountMobileDropdown .active {font-weight: bold;}
+#accountMobileDropdown li:not(.sidebarheader) {margin-left:10px;}
+/** END: ACCOUNT PAGES **/
+
+/** START: AGENCY Listings edit **/
+.tabsubheader {font-size: 2rem;margin:40px 0;border-bottom:3px solid black;border-top:3px solid black;padding:6px 0;}
+.medfonts { font-size:2.2rem }
+.personsocial {font-size: 1rem;}
+/*.personsocial a {color:;}*/
+.addnewsocial {font-size: 0.8rem;}
+.socialbuttons {font-size:1.4rem;margin-right:10px;}
+.dbtabsdiv {margin:40px 0;}
+.bar {
+    border-bottom: 1px solid #cacaca !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 1px;
+}
+.highlightpanel {background:#DAFFD7;}
+.okmessage,.errormessage {border:1px dotted #ccc;padding: 12px;
+  text-align: center;
+  font-size: .9rem;
+  margin: 12px auto;
+  max-width: 80%;}
+.errormessage {background-color: #FFDBD7;}
+.okmessage {background-color: #DAFFD7;}
+.personame {font-size:1.2rem;font-weight: bold;border-top: 1px solid #666;
+    margin: 30px 0 10px 0;
+    padding: 20px 0 10px 0;}
+.fi-x {color: red;}
+.mdcTopNav18 i {vertical-align:middle;}
+.has-tip {font-weight: normal;border-bottom:none;}
+.existingaccts {margin:20px 0 20px 0;}
+.acctsyouadded,.existingaccts {font-size: .8rem;line-height: 2rem;}
+.acctheader {font-size:1rem;margin-bottom:10px;}
+.addbutton {height: 37px;}
+.addnewlabel {line-height: 2rem;}
+/** END: AGENCY Listings edit **/
+
+/** START: REGISTER **/
+/*#maincontent {width: 90%;padding: 0 5%;}*/
+ul.socialgrid {line-height:1;margin:0 5%;width:90%;}
+.socialgrid li {
+    text-align:center;
+    padding:0;
+    margin:8px 0;
+    padding:6px 0 6px 4px;
+    border-right: 1px solid white;
+    font-size: 1.1em !important;
+}
+.socialbuttons {margin-right: 0px !important;font-size: 1.8em !important;}
+.socialgrid li a {color:white !important;text-decoration: none !important;display:inline-block !important;}
+.social-facebook {color:white;background-color: rgb(59, 89, 152);}
+.social-facebook:hover {color:white;background-color: rgba(59, 89, 152, 0.75);cursor: pointer;}
+.social-twitter {color:white;background-color: rgb(0, 172, 237);}
+.social-twitter:hover {color:white;background-color: rgba(0, 172, 237, 0.75);cursor: pointer;}
+.social-instagram {color:white;background-color: rgb(18, 86, 136);}
+.social-instagram:hover {color:white;background-color: rgba(18, 86, 136, 0.75);cursor: pointer;}
+.mdcAccount h4 {font-weight:bold;font-size:1.4em;margin:1em 0;}
+.registerButtonRow {margin-bottom:120px !important;}
+.registerButtonRow input {float:none !important;}
+/** END: REGISTER **/
+
+/** START: Settings **/
+.split2 label {float: left;width: 47%;}
+.split2 label + label {margin-left: 5%;}
+.split3 .row {width: 100%;}
+.split3 label {display: block;}
+.split3 div {display: inline-block;}
+input[name="contact_me"] + label {font-weight: normal;}
+/** END: Settings **/
+/** START: Content Box **/
+.mdcAccount form .row .row {margin: 0;}
+.mdcAccount form .row .row .column, form .row .row .columns {padding: 0;}
+.panel.callout {color: #66696c;}
+.panel.callout a {color: #0cb914;}
+.contentbox {position: relative;clear: both;padding: 1.25rem;background: #fff;}
+.contentbox.white {background: White;}
+.contentbox > .row > .columns {background: White;}
+.contentbox .small-graycols.row > .columns,.contentbox .graycols.row > .columns {background: #fff;}
+.contentbox .large-graycols.row > .columns {background: #fff;}
+.contentbox .large-border,.contentbox .large-border-trbl,.contentbox .large-border-rbl {border: 1px solid black;}
+.contentbox .large-border-rbl {border-top: 0 none;}
+.contentbox .whitebox {background: White;}
+.cb-left {padding: 30px 20px;}
+.cb-dups {padding: 20px;background-color: white;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.colhead {margin-bottom: 25px;}
+.colhead h3 {line-height: 17px;}
+.colhead p {font-size: 13px;line-height: 17px;font-weight: normal;color: Black;}
+/** END: Content Box **/
+/** START: Form **/
+.contentbox form label:not(.assAgencyLabel):not(.checkAllLabel):not(.agreementRowlabel) {font-size: 1.2rem;font-weight: bold;line-height: 1.3rem;color: #66696c;}
+.css-small .contentbox form label {font-size: 1.2rem;line-height: 1.125rem;}
+.contentbox form label a,.contentbox form h4 + a {font-size: 12px;font-weight: normal;color: #66696c;}
+.css-small .contentbox form label a,.css-small .contentbox form h4 + a {font-size: 9px;font-weight: normal;color: #66696c;}
+cite {font-size: 12px;line-height: 13px;color: Black;}
+.css-small .contentbox form input + cite,.css-small .contentbox form select + cite {display: block;margin: 5px 0 10px;}
+.contentbox form input[type="text"],.contentbox form input[type="email"],.contentbox form input[type="password"],.contentbox form select {outline: none;height: 3rem;line-height:2rem;margin: 3px 0 0;font-size: 16px;font-weight: normal;color: #66696c;}
+.navSelect {/*height: 2rem;*/color: #66696c;outline: none;}
+.navSelectLabel {padding:.5rem 0;font-weight: bold;font-size: 1rem;text-align: center;}
+.ZnavSelect {;outline: none;}
+.ZnavSelect:first-child,.navSelect:first-child {color: #999;}
+.contentbox .fieldrow .columns {margin-bottom: 25px;}
+/*.contentbox form .row .columns + .columns {margin-left: 12px;}*/
+/*.contentbox form .row .large-12 + .columns {margin-left: 0;}*/
+.contentbox input[type="submit"]:not(.button) {float: right;padding: 9px 20px;font-size: 20px;font-weight: bold;color: White;border-style: none;border-color: inherit;border-width: 0;background-color: #555555;}
+@media only screen and (min-width: 59.438em) {.emailNote {padding:2rem 0 0;display:inline-block;}}
+/** END: Form **/
+
+/** START: Onboarding/Login **/
+@media only screen and (max-width: 40em) {#loginModal {padding: 0;left:0;margin:0;width: 100%;}}
+
+.onboarding ul {list-style: outside;margin-left: 2.5em;}
+.onboarding ul li {font-size:20px;}
+
+.mdcAccount h2 {font-size: 40px;font-weight: bold;color: #66696c;}
+.mdcAccount li:not(.sidebarheader) h2 {font-size: 40px;font-weight: bold;color: #66696c;}
+/*.mdcAccount h3, .mdcAccount h3 a {margin-top: 30px;margin-bottom: 20px;font-size: 20px;font-weight: normal;color: #2f2f2f;}*/
+.mdcAccount h3, .onboarding p {margin-top: 30px;margin-bottom: 20px;font-size: 20px;font-weight: normal;color: #2f2f2f;}
+.mdcAccount hr {border: 0;border-bottom: 1px dashed #b8b9ba;background-color: White;color: #b8b9ba;}
+
+
+/** START: Foundation Overrides (hyperbolic) **/
+.onboarding h1 {font-size: 3rem;font-weight: bold;color: #949494;}
+.onboarding .css-small h1,.onboarding .css-medium h1 {font-size: 35px;line-height: 38px;font-weight: bold;color: #303030;}
+.onboarding .login h1 {color: #66696c;}
+.onboarding h2 {font-size: 40px;font-weight: bold;color: #66696c;}
+.onboarding .css-small h2,.onboarding .css-medium h2 {font-size: 35px;line-height: 38px;font-weight: bold;color: #66696c;}
+/** END: Foundation Overrides (hyperbolic) **/
+
+#loginModal div,#loginModal input {outline: none;}
+#loginModal .borderbox {border: 1px solid #cfcfcf;}
+.onboarding h1 {margin: 30px 0 5px;}
+.onboarding h2 {margin-bottom: 20px;font-size: 25px;line-height: 23px;font-weight: normal;color: #303030;}
+.onboarding .onb-modules h3 {font-size: 60px;line-height: 53px;font-weight: bold;color: #a5a7a8;}
+.css-small .onboarding .onb-modules h3 {font-size: 43px;line-height: 41px;}
+.onboarding .onb-modules p {font-size: 15px;line-height: 1.125rem;font-weight: normal;color: #a5a7a8;}
+.steps.onboarding .onb-modules .borderbox {padding: 60px 20px;}
+.onb-module {padding-right: 30px;}
+.onb-module + .onb-module {padding-left: 30px;padding-right: 0;}
+.css-small .onb-module,.css-medium .onb-module {margin-bottom: 60px;padding-right: 0;}
+.css-small .onb-module + .onb-module,.css-medium .onb-module + .onb-module {padding: 0;}
+.css-small .step4 .onb-module,.css-medium .step4 .onb-module {margin-bottom: 0;}
+.onboarding h1 + p {font-size: 16px;line-height: 19px;}
+.onb-modules-sm li {padding: 0 0.55556rem 1.11111rem;}
+.onb-modules-sm .borderbox {display: block;max-height: 294px;padding: 125px 10px;text-align: center;}
+.css-small .onb-modules-sm .borderbox {max-height: 129px;padding: 55px 10px;}
+.css-medium .onb-modules-sm .borderbox {max-height: auto;/*max-height: 129px;*/padding: 95px 10px;}
+.onb-modules-sm h3 {margin:0;font-size: 40px;line-height: 38px;font-weight: bold;color: #b6b6b6;}
+.onboarding a:not(.sb-button) {color: #ffa500;}
+.onboarding a:hover,.onboarding a:hover h3 {color:#66696c;}
+.css-small .onb-modules-sm h3 {font-size: 1.125rem;line-height: 16px;color: #b6b6b6;}
+.css-medium .onb-modules-sm h3 {font-size: 30px;line-height: 26px;color: #b6b6b6;}
+.onboarding .onb-modules h4 {font-size: 1.125rem;color: #66696c;}
+.onboarding .onb-modules .onb-module .inputwrap {padding: 15px 0;}
+#bdayrow {margin-left: -0.833333rem;margin-right: -0.833333rem;}
+#bdayrow > div {padding: 0 0.833333rem;}
+.loginBack {margin-top: 3rem; display: none;}
+.loginBack .borderbox {padding: 3rem;}
+/** END: Onboarding/Login **/
+
+/** START: Login Pages **/
+.loginrow > .small-12 {margin-bottom: 50px;}
+.loginrow .borderbox {padding: 32px;}
+.css-small .loginrow .borderbox {padding: .8rem;}
+.loginrow .small-1 {width: 14%;min-width: 65px;}
+.loginrow .large-9 {width: 70%;line-height: 60px;}
+.loginrow form .row {margin-bottom: 30px;}
+.loginrow form .row.short {margin-bottom: 10px;}
+.loginrow form .row a {font-size: 11px;color: #66696c;}
+.loginrow form .row input + a {display: block;margin-top: 10px;}
+.settings form input[type="radio"],.onboarding form input[type="radio"],.onboarding form input[type="checkbox"],.loginrow form input[type="checkbox"] {width: 16px;height: 16px;margin: 0;padding: 0;line-height: 16px;border: 1px solid #ccc;}
+.onboarding form input[type="radio"] {margin-right: 5px;border-radius: 6px;margin-top: 5px;}
+.loginrow form label {font-size: 11px;line-height: 16px;vertical-align: top;color: #66696c;}
+.onboarding {padding: 0 /*5.0%*/;}
+.css-small .onboarding,.css-medium .onboarding {padding: 0 8.2%;}
+.css-small .loginrow h4 {font-size: 14px;line-height: 1.125rem;}
+.loginbox img {padding: .2rem;}
+.onboarding input[type="email"], .onboarding input[type="text"], .onboarding input[type="password"] {height: 48px;margin: 3px 0 0;font-size: 16px;font-weight: normal;color: #66696c;}
+.css-large .onboarding input[type="email"], .css-large .onboarding input[type="text"], .css-large .onboarding input[type="password"] {height: 60px;}
+.learnmore h1 {margin-bottom: 20px;margin-top:0;}
+.learnmore h4 {margin-bottom: 15px;}
+.learnmore p {margin-bottom: 15px;}
+@media only screen and (min-width: 59.375em) {.row.alignBottomRight {   position: absolute; bottom: 4rem;right:3rem;}}
+.rememberMe {position: relative;top:.5rem;}
+.onboarding input[type="submit"],.learnmore .btn_learnmore {float: right;padding: 9px 20px;font-size: 20px;font-weight: bold;color: White;border-style: none;border-color: inherit;border-width: 0;background-color: #555555;}
+/*.css-large .onboarding input[type="submit"],.css-large .learnmore .btn_learnmore,.css-xlarge .onboarding input[type="submit"],.css-xlarge .learnmore .btn_learnmore {font-size: 34px;line-height: 39px;padding: 0;font-weight: normal;color: #949494;background-color: transparent;}*/.step4 label {font-size: 0.775rem;}
+.onboarding form input[type="checkbox"] {margin-right: 5px;margin-left: 5px;}
+.contact_me_row {margin-bottom: 25px;}
+.contact_me_row label {padding-left: 1.5em;text-indent: -1.5rem;}
+.settings blockquote {border:0;}
+.settings.verify p {padding:1rem;}
+.login input[type="email"],.login input[type="password"] {height: 50px;}
+#loginModal .notamember h1 {margin-top: 0;}
+#loginModal .login {color: #333;}
+#loginModal .login strong {font-weight: 500;}
+#loginModal form .row .row.orLine {margin-bottom: 1rem;}
+#loginModal .orLine h4 {color: #666;}
+#loginModal .orLine .small-5 {border-bottom: 1px solid #999;height: 10px;}
+#loginModal .loginwith h4 {color: #666;}
+#loginModal .loginrow h4 {font-size: 1rem;line-height: 1rem;}
+.forgotPass a {line-height: 2rem;border-bottom: 1px dotted #999;}
+.login h1 {font-size:1.5rem;display:inline-block;font-weight: 500;margin: 1rem 0;}
+.login h1 .smallRegAnchor {font-size:.8rem;}
+/*.loginrow form .row .socialrow,.loginrow form .row .loginwith {margin-bottom:0;<!--- max-height:50px; --->}*/
+.loginrow form .row {margin-bottom:.5rem;}
+.loginformcontainer {margin-bottom:.5rem;}
+.loginbox h4 {font-size:1rem;margin:0;font-weight: 400;}
+.loginrow form .row .socialrow {margin-bottom: .5rem;}
+ul.socialgrid {line-height:1;margin-left: 4px;width:98%;}
+.socialgrid li {text-align:center;padding:0;margin:8px 0;padding:6px 0 6px 4px;border-right: 1px solid white;font-size: 1.1em !important;}
+.socialbuttons {margin-right: 0px !important;font-size: 1.8em !important;}
+.socialgrid li a {color:white !important;text-decoration: none !important;display:inline-block !important;}
+.social-facebook {color:white;background-color: rgb(59, 89, 152);}
+.social-facebook:hover {color:white;background-color: rgba(59, 89, 152, 0.75);cursor: pointer;}
+.social-twitter {color:white;background-color: rgb(0, 172, 237);}
+.social-twitter:hover {color:white;background-color: rgba(0, 172, 237, 0.75);cursor: pointer;}
+.social-instagram {color:white;background-color: rgb(18, 86, 136);}
+.social-instagram:hover {color:white;background-color: rgba(18, 86, 136, 0.75);cursor: pointer;}
+#loginModal .notamember a.button.info {top:2rem; background-color: #fff;border: 1px solid #999;text-decoration: none;}
+@media only screen and (max-width: 40em) {
+    #loginModal .learnmore {display: none;}
+    #loginModal .login h1 {padding: 0 .8rem;margin:.5rem 0 0;}
+    #loginModal .reveal-modal .close-reveal-modal {line-height: 1.5rem}
+    #loginModal form .row .row {margin: 0;}
+    #loginModal ul.socialgrid {margin-left: 0;width:100%;}
+    #loginModal .login input[type="email"], .login input[type="password"] {height: 40px;margin:0 0 .5rem;}
+    #loginModal .loginrow .borderbox {border: 0;}
+}
+@media only screen and (min-width: 40.063em) {
+    .loginrow .loginbox {padding-right: 8px;}
+    .loginrow .learnmore {padding-left: 8px;}
+}
+
+/** END: Login Pages **/
+.reveal-modal, dialog {z-index: 9999;}
+
+/** Contact Pages **/
+.contacts p {padding:1rem;}
+.contacts .large-graycols {padding:1rem;}
+.contacts .large-graycols h4 {font-weight: bold;}
+.contacts .msgRow {padding:  0 1rem; font-size: .8rem;}
+
+/** START: Contacts **/
+.contacts .contentbox {padding: 0;background: Transparent;}
+.css-small .contacts .contentbox {padding: 0 .5rem;}
+.contacts section {margin-bottom: 3rem;}
+.contacts dd.accordion-navigation > a i {position: relative;top: .1rem;display:inline-block;}
+.contacts dd.accordion-navigation.active > a i {-ms-transform: rotate(-30deg);-webkit-transform: rotate(-30deg);transform: rotate(-30deg);}
+.css-small .contacts h3 {padding: .5rem;font-size: 1.5rem;line-height: 25px;}
+.contacts h4 {padding: .5rem;font-weight: bold;color: #868585;}
+.css-small .contacts h4 {padding: 0;font-size: 19px;}
+.contacts p {margin: .5rem;line-height: 1.5rem;color: #b4b3b3;}
+.css-small .contacts p {font-size: 1.125rem;line-height: 1.3rem;margin-bottom: 1.3rem;}
+.contacts .redbbox {padding: 35px 35px 10px;font-size: 1.125rem;line-height: 19px;font-weight: bold;color: #b4b3b3;border: 1px solid #f48990;}
+.css-small .contacts .redbbox {padding: 15px 15px 5px;font-size: 14px;line-height: 14px;}
+.contacts section {line-height: 3rem;}
+.contacts section a {font-size: 1rem;color: #66696c;}
+.css-small .contacts section a {font-size: 1.125rem;line-height: 19px;}
+.contacts .msgRow {border-bottom: 1px solid #ccc; }
+.contacts .msgRow:hover {background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) }
+.contacts .msgRow .columns {padding: 0 .4rem;line-height: 2}
+.contacts .contactViewAll {padding: .5rem .5rem .5rem 0;}
+.contacts .contactViewAll a.button {margin: 0;}
+.contacts .msgRow.readMsg {opacity: .6;}
+.contacts .panel p, .contacts section .panel a {color:inherit;font-size:.8rem;line-height: 1;}
+.contacts .panel ul {list-style: initial;font-size:.8rem;line-height: 1;padding:0 0 0 2rem;}
+.contacts .panel li:first-child {list-style-type: none;font-weight: bold;}
+.contacts .msgRow.agContact {background-color: #ffffe6;}
+.contacts .agencyContact {padding:0 .5rem .25rem;line-height: 1rem;font-size: .8rem;white-space: nowrap;}
+.contacts .singleContact {line-height: 1.5;margin-top: 1rem;}
+.contacts .singleContact p {color:black; margin: 0 0 1rem;}
+.contacts .singleContact textarea {margin-bottom: 1rem;height:6rem;}
+@media only screen and (max-width: 40em) {.contacts .msgRow {padding: .5rem;}}
+@media only screen and (min-width: 40.063em) and (max-width: 59.375em) {.contacts .singleContact {padding: .5rem;}}
+/* END: Contacts */
+
+/* START Footer */
+    #footer {padding:10px 0px;}
+    #footer .links {font-size:1rem;}
+    #footer .copyright {font-size:.9rem;line-height:1.2rem;}
+    #footer .row {padding:5px 0;}
+/* END Footer */
+
+/* START people detail */
+.upgradefeatures{color: #A9A9A9 !important;}
+.mdcdropdown {
+    width: 100%;
+    background-color: white !important;
+    border: 1px solid #a9a9a9;
+}
+.active-tab-body {min-height: 600px;}
+.mdcdropdown:focus {outline: none;}
+.f-dropdown {z-index: 9999 !important;}
+.capitalize {text-transform: capitalize;}
+@media screen and (min-width: 641px) {
+    #p-centerdiv{padding: 0 30px;}
+    #p-leftdiv {
+    border-left: 1px #cacaca solid;
+    border-right: 1px #cacaca solid;}
+}
+@media screen and (max-width: 640px) {
+    #searchSwitches .button-group {margin:20px auto;}
+    #searchSwitches .mdcfav-button-group {margin:0 auto;}
+    #peopleDetail #nameBox h3 {font-size: 1.6em !important;text-align: center;white-space: normal;}
+    #peopleDetail #photo {/*max-height: 350px;*/
+    overflow: hidden;
+    width: 70%;
+    margin: auto;}
+    #profileInfoBox,#updatesHeader,#newsContainerRowDiv, #externalInfoDivMobile {margin: 0 12px;}
+    .active-tab-body {padding:0 12px !important;}
+    .work-box div.small-9 {padding-left:8px;}
+}
+#biodata div {margin:8px auto;}
+#biotxt {text-align: justify;}
+#searchSwitches .button-group {display: inline-block;width: auto !important;}
+
+#bio {margin:20px 0;}
+#bio h5 {font-size: .75rem;}
+/*#p-leftdiv #ppl-ranked {margin-left: 4px;}*/
+
+
+#biodata,#biotxt,#biostats{font-size: 0.9rem;}
+#p-rightdiv{
+    border-left: 1px #cacaca solid;
+    padding: 0 0 0 22px;
+    font-size: 0.8rem;}
+.photo-credit{margin:3px 5px;font-size:0.6rem;}
+.p-leftinfo{margin:0 10px;}
+
+.bbottomline {margin-bottom: 12px;}
+#p-credits li, #model-right li {font-size:0.8rem;line-height: 1rem;}
+#model-right #socialLinks a i {position: relative;top: 3px;}
+#agency-left h4 {font-size:0.8rem;}
+#agency-left h4 {font-weight: 600; margin-top:12px;}
+#peopleDetail #model-right > div {margin-top: 2rem;}
+#peopleDetail #model-right div:first-child {margin-top: 0;}
+@media only screen and (max-width: 60em) {
+	#peopleDetail #model-right { border-top: 1px solid #000;margin-top: 2rem;}
+	#peopleDetail #model-right > div:first-child {margin-top: 2rem;}
+	#peopleDetail #p-rightdiv {border: 0;margin: 0 12px;}
+}
+
+#ppl-ranked li, #p-credits li {/*border-bottom: 1px solid #e0e0e0;*/padding: 4px 0;}
+#stats table {
+    border:none;
+    width:100%;
+    margin:2rem auto;
+}
+.stats-line {border-bottom: 1px solid #ccc;}
+#stats table, #stats thead {background-color: white;border-left:0;border-right: 0;}
+#stats table thead tr th,#stats table tr th {color:#999;font-size: 0.75rem;}
+#stats table thead tr th,#stats table tr th, #stats table tr td {
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+    padding: .25rem .5rem;
+}
+#isThisYou {margin:12px 0;}
+@media only screen and (min-device-width: 769px) {
+    #updateBio {
+    width: 50%;
+    margin-left: -25%;
+    }
+}
+.work-div {margin-top: 32px;}
+.work-box {margin-bottom:10px;padding: 4px;}
+.work-box .credits {font-size: 0.8rem;}
+.work-box .credits-clients {font-size: 0.95rem;}
+.qtip {max-width:400px;} #qtip-popup {width:inherit;} #popup-work-right-thumbs img {margin:0 2px 4px 0;}
+
+
+#EditButton {
+    z-index:1500;
+}
+
+#nameBox  {white-space:nowrap;}
+
+
+/* START OTM */
+
+/** OTM GALLERY OVERRIDES **/
+.post-gallery-content .row .columns.image-text p {color:#222 !important;}
+.post-gallery-content .image img {padding: 0 !important;border:0 !important;}
+.post-gallery-content .row .columns.image {padding: 0 !important;}
+.post-gallery-content .row .columns .arrow:hover {background: #222 !important;}
+.containAuthorSocial .boxed-icon {color: #888 !important}
+.post .post-author {font-size: .6em !important;}
+.post .post-author a {color: #888 !important;}
+.post .post-gallery .gallery-link {background: #000 !important;color: #fff !important;}
+.post-gallery-content a {color: #000 !important;}
+.post-gallery-content .row .columns.image-text {background: #fff !important;}
+.post-gallery-content .row .columns.image-text h5 {
+    margin: 4px 0 !important;
+    font-size: .9em !important;
+    color:#999 !important;
+}
+#wp-content a {color: red !important;}
+.post-gallery-content .row .columns .arrow + span em {color:#ABABAB !important;}
+.post .post-gallery .gallery-link {bottom:20% !important;}
+#mdcVouxGalleryImage {height: 80% !important;}
+#mdcVouxGalleryCaption {
+    height: 10% !important;
+    padding: 4px 15px !important;
+    overflow-y: hidden !important;
+    }
+.post-gallery-content .row .columns.image .arrow {display: block !important;}
+.post-gallery-content {
+    padding-bottom: 10px !important;
+    padding-top: 55px !important;
+    }
+.post-gallery-content .lightbox-header {height:55px !important;}
+@media only screen and (max-width: 40em) {
+    .post-gallery-content .lightbox-header {
+        position: relative !important;
+        height: 10% !important;
+        top:0 !important;
+    }
+}
+#mdcVouxGalleryTitle, #mdcVouxGalleryClose {padding-top: 10px !important;}
+#mdcVouxGalleryClose span.mdcVouxGalleryCount {line-height:1.4 !important;}
+.post .post-gallery .gallery-link .rel {
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/** OTM FAQ **/
+div[id^="faq-"] p a, .post-content a {color:#827430 !important;}
+
+/* END OTM */
+
+/*#work-year-nav,#work-client-nav {padding:20px 0;}*/
+#categorylabel {background-color: white;border:1px solid white;}
+.mdcbutton.disabled.secondary, .mdccategorybutton.disabled.secondary {background-color: #999;color: white;}
+.mdcbutton.tiny {padding-left: 0.5rem;padding-right: 0.5rem;}
+.mdcbutton {padding-left: 1rem;padding-right: 1rem;}
+.mdccategorybutton {padding-left: 0.5rem;padding-right: 0.5rem;}
+
+.dimmer{opacity: 0.2;}
+
+.adremoval{  display: block !important}
+.edremoval{  display: block !important}
+.maremoval{  display: block !important}
+.shremoval{  display: block !important}
+.loremoval{  display: block !important}
+.otremoval{  display: block !important}
+
+.buttonSelectedColor {background-color: red !important}
+
+.thisishidden {  display:none;}
+
+#clientIndexList{/*overflow-y: scroll; height:500px;*/}
+.over{cursor:pointer;background-color:#efefef;}
+
+.navbox .pagination, #work-year-nav .button-group, #work-client-nav .button-group {display: inline-block;}
+.navbox .pagination {height: auto;} 
+#mainmenu {margin-bottom: 1rem;}
+.navbox, #mainmenu .row {position: relative;}
+.bar {border-bottom: 1px solid #cacaca !important;position: absolute;bottom:0;width: 100%;min-height: 1px;}
+.navbox .bar {bottom: 2px;}
+#work-client-nav h4 {margin:1rem;}
+.maincontentdiv h4 .fi-x, .maincontentdiv h4 .fa-times {
+    margin:0 .8rem;
+    font-size:0.7rem;
+    color:#fff;
+    background-color:#b7b7b7;
+    border-radius:1rem;
+    position: relative;
+    bottom:.1rem;
+    padding:.2rem .3rem .2rem .3rem;}
+
+.morecontent span {display: none;}
+/* END people detail 
+
+/* TopNav/ProSearch fixes */
+#mdctopnav-root img {vertical-align: middle;}
+#mdctopnav-root img#bgLogo {height: 26px;}
+
+
+#mdcTopNavLogin .ui.basic.button:not(.button-blue):hover {
+    color: rgba(0,0,0,.8)!important;
+    -webkit-box-shadow: 0 0 0 1px rgb(34 36 38 / 35%) inset, 0 0 0 0 rgb(34 36 38 / 15%) inset;
+    box-shadow: 0 0 0 1px rgb(34 36 38 / 35%) inset, 0 0 0 0 rgb(34 36 38 / 15%) inset;
+}
+#mdctopnav-root .mdcTopNav18-User-Menu .siteLinks a { font-size: .9em; }
+#mdctopnav-root .mdcTopNav18-User-Menu .siteLinks li { line-height: 1; }
+#mdctopnav-root .mdcTopNav18-User-Menu .siteLinks p {line-height: 1.4285em;}
+
+
+#peopleDetail .p-leftinfo > div {margin-top: 1rem;}
+#peopleDetail #nameBox h3 {font-size: 2.8em;}
+#peopleDetail #bio h5 { margin-top: 0;}
+#peopleDetail #bio h3 { margin-bottom: 0.25rem;}
+#peopleDetail .addAgencyRepresentation {margin-top: 10px;}
+
+
+#peopleDetail #videoOnlySwitch, #peopleDetail #limitSwitch {line-height: 30px; text-align: center;}
+#peopleDetail .mdcDropDownSelector label.mdcRadio {height: 22px;width: 41px;}
+#peopleDetail .mdcDropDownSelector label.mdcRadio .slider.round {border-radius: 18px;}
+#peopleDetail .mdcDropDownSelector label.mdcRadio input:checked+.slider:before {-webkit-transform: translateX(19px);-ms-transform: translateX(19x);transform: translate(19px);}
+#peopleDetail .mdcDropDownSelector label.mdcRadio .slider:before {height: 18px;width: 18px;}
+.mdcClients #clientVideoSwitch, .mdcdbSearchPage #newsfeedVideoSwitch {margin-left: 1rem; line-height: 35px;position: relative;}
+@media only screen and (max-width: 769px) {
+	.mdcClients #clientVideoSwitch, .mdcdbSearchPage #newsfeedVideoSwitch {top: -3px;}
+}
+#videoOnlySwitch .mdcDropDownSelector, #limitSwitch .mdcDropDownSelector {font-size: .8rem; padding: 0;}
+#videoOnlySwitch .mdcDropDownSelector label, #limitSwitch .mdcDropDownSelector label {margin: 0 5px;}
+@media only screen and (max-width: 769px) {
+	#videoOnlySwitch .mdcDropDownSelector > span, #limitSwitch .mdcDropDownSelector > span  {top: 3px; position: relative;} 
+	#peopleDetail #videoOnlySwitch, #peopleDetail #limitSwitch {line-height: 32px; text-align: right;}
+}
+
+.mdcDropDownSelector label.mdcRadio .slider.round:after {
+    content: '\f00d';
+    font-size: 11px;
+    right: 8px;
+    top: 3px;
+    position: absolute;
+    line-height: 1.5;
+    font-family: "Font Awesome 5 Pro"!important;
+    color: white;
+}
+.mdcDropDownSelector label.mdcRadio input:checked+.slider.round:after {
+    content: '\f00c';
+    right: 24px;
+    color: white;
+    font-size: 10px;
+    top: 4px;
+    position: absolute;
+    line-height: 1.5;
+    font-family: "Font Awesome 5 Pro"!important;
+}
+@media screen and (max-width: 950px) {
+	.mdcDropDownSelector label.mdcRadio .slider.round:after {
+	    font-size: 14px;
+	    top: 4px;
+	    right: 10px;
+	}
+	.mdcDropDownSelector label.mdcRadio input:checked+.slider.round:after {
+	    font-size: 14px;
+	    top: 4px;
+		right: 28px;
+	}
+	#peopleDetail .mdcDropDownSelector label.mdcRadio .slider.round:after {
+	    font-size: 11px;
+	    top: 3px;
+	    right: 8px;
+	}
+	#peopleDetail .mdcDropDownSelector label.mdcRadio input:checked+.slider.round:after {
+	    font-size: 11px;
+	    top: 3px;
+		right: 24px;
+	}
+}
+
+#peopleDetail #work-year-nav .mdcbutton {margin-bottom: .5rem;}
+#peopleDetail ul.pagination li {height: 30px;}
+#peopleDetail ul.pagination li a {padding: 3px 14px;}
+#peopleDetail #peopleTabVideoSwitch {position: absolute; top: 80px; right: 30px;z-index: 19;}
+#peopleDetail #peopleTabLimitSwitch {position: absolute; top: 105px; right: 30px;z-index: 19;}
+#peopleDetail #updatesHeader {margin-top: .5rem;margin-bottom: 1.25rem;}
+#peopleDetail .workRow h4.bbottomline {font-weight: normal;border: none;}
+#peopleDetail .button-group li:last-child a.disabled, .mdcClients .button-group li:last-child a.disabled {border-right: 1px solid #cacaca;}
+#peopleDetail #nameBox .MOTYaward {font-size: 20px; vertical-align: middle; color: gold;}
+#peopleDetailMOTYcontainer .rankbadge {margin-bottom: 1rem;}
+#peopleDetailMOTYcontainer i.close {color: inherit;}
+#peopleDetail #MOTYBar {background-color: gold;font-size: .65em;display: inline-block;text-decoration: none;padding: 0.5rem;margin-top: 0.5rem;}
+#peopleDetail .yellowBorderBadge.rankbadge {border-color: gold !important;}
+#peopleDetail #MOTYBadge.yellowBadge .rankbadge, #peopleDetail .yellowBadge.rankbadge {background-color: gold !important; color: white;border-color: gold !important;}
+#peopleDetailMOTYcontainer .MOTYcontents p {font-size: .9rem;margin-left: 2rem; text-indent: -2rem;}
+#peopleDetailMOTYcontainer .MOTYcontents p a {text-decoration: underline;}
+#peopleDetail #agencies #agency-rep-edit-launcher-root {margin-top: .5rem;}
+
+.MDC22.mdcdbSearchPage .mdcsearchResultsRecord, .MDC22.mdcdbSearchPage .mdcsearchResultsRecord h4 {font-size: .8rem;}
+.MDC22.mdcdbSearchPage .mdcsearchResultsRecord h2 {font-weight: bold !important;font-size:1.2em;}
+.MDC22.mdcdbSearchPage .mdcsearchResultsRecord h2 .notShownInTrending {font-size: .8rem;font-weight: normal;}
+.MDC22.mdcdbSearchPage h4 a, .MDC22.mdcdbSearchPage h3 a {text-decoration: underline;}
+.MDC22.mdcdbSearchPage h3.trendingClient {color: #999;font-weight: 400;font-size: .8rem;}
+.MDC22.mdcdbSearchPage .mdcsearchResultsRecord h2.trendingPeople{padding: 0 0 .2rem;display: inline-block; color: black;}
+
+#productPageContent button.sb-button {margin-bottom: 0;}
+
+
+@media only screen and (max-width: 40em) {
+	#peopleDetail #peopleTabVideoSwitch {right: 0px;}
+	#peopleDetail #peopleTabLimitSwitch {right: 0px;top: 110px;}
+	.peopleTabApp select {margin-top:40px;}
+}
+
+.mdcClients .mdcbutton {line-height: 12px;}
+
+/* new MDC standards */
+
+.MDC22 h4 {font-size:0.9rem;margin:1rem 0 .25rem;font-weight: 600;}
+.MDC22 h5 {font-size:0.8rem;font-weight: normal;}
+.MDC22 h1:first-child,.MDC22 h2:first-child,.MDC22 h3:first-child,.MDC22 h4:first-child,.MDC22 h5:first-child{margin-top: 0;}
+.MDC22 a {color: #000;}
+.MDC22 a:focus, .MDC22 a:hover {color: #333;}
+.MDC22 a.mdcbutton, .MDC22 .EditButton {color: #333;}
+.MDC22 .ui.positive.button, .MDC22 .ui.positive.buttons .button {background-color: #52c16c;}
+/* peopleDetail  */
+	.MDC22 #model-left a, .MDC22 .morelink, .MDC22 .qtip a {text-decoration: underline;}
+	.MDC22 .userInfoMessageDiv a {text-decoration: underline;}
+	.MDC22 #model-left .rankbadge a,
+	.MDC22 #model-left .removeAgencyRep,
+	.MDC22 #peopleDetail .addAgencyCreditButton,
+	.MDC22 .qtip #popup-work-right-thumbs a 
+		{text-decoration: none;}
+
+
+/* new MDC standards */
+
+#backtotop {display: none;opacity: 0.8;}
+
+/*.rainbow {
+  width: 100%;
+  height: 1px;
+  background-repeat: repeat-x;
+  background: linear-gradient(to right, #ef5350, #f9a825, #eeff41, #43a047, #2196f3, #7e57c2);
+}*/
+
+.reveal-modal-bg {
+	    background: rgba(255,255,255,.85);
+	}
+	.semanticLikeModal.reveal-modal {
+		border: none;
+	}
+	@media only screen and (min-width: 40.063em){
+		.semanticLikeModal.reveal-modal.small {
+		    margin-left: -25%;
+		    width: 50%;
+		}
+	}
+	.semanticLikeModal, .semanticLikeModal .panel {border-radius: .28571429rem;}
+	.semanticLikeModal h2 {padding: 0 0 .8rem 0;}
+	.semanticLikeModal li {position: relative; margin-top: 10px; list-style: outside none none; padding: 0px; font-size: .85rem;}
+	.semanticLikeModal li i {color: rgb(235, 109, 31); font-size: 1rem; height: 18px; position: absolute; top: 0px; bottom: 0px; margin: auto;}
+	.semanticLikeModal h2 a {color: #4183C4;text-decoration: none;}
+	.semanticLikeModal .header {
+	    padding-bottom: 0.75rem;
+	    font-weight: bold;
+	    font-size: 1.5rem;
+	}
+	.semanticLikeModal .panel {
+		background-color: #fff;
+		margin-bottom: 0;
+	}

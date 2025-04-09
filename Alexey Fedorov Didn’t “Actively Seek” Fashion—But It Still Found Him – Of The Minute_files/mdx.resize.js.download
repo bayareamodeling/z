@@ -1,0 +1,32 @@
+jQuery(function() {
+    
+    var allVideos = jQuery("iframe[src*='//player.vimeo.com'],iframe[src*='//instagram.com'], iframe[src*='//www.youtube.com'], object, embed, video:not(.noresize)");
+    if(jQuery('#vidWidthLimit').length) {
+		var fluidEl = jQuery("#vidWidthLimit");
+    } else {
+		var fluidEl = jQuery(".post p");
+    }
+
+	allVideos.each(function() {
+	jQuery(this)
+		// jQuery .data does not work on object/embed elements
+		.attr('data-aspectRatio', this.height / this.width)
+		.removeAttr('height')
+		.removeAttr('width');
+	});
+	
+	jQuery(window).on('resize',function() {
+		jQuery("#introBlock").css({'width' : '100%', 'height' : ''});
+		var newWidth = fluidEl.width();
+		allVideos.each(function() {
+			var el = jQuery(this);
+			el
+				.css({'padding':'0'})
+				.width(newWidth)
+				.height(newWidth * el.attr('data-aspectRatio'));
+		});
+		jQuery("#introBlock").css({'width' : jQuery("#introBlock").children("video").width(), 'height' : jQuery("#introBlock").children("video").height()});
+	
+	}).trigger("resize");
+
+});
