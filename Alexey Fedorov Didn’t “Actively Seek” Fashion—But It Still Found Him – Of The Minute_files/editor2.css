@@ -1,0 +1,288 @@
+
+
+/* from tabs.css */
+/* for the tabs */
+.dateTypeSwitcher {line-height:2.3125rem;font-size: .9rem;}
+@media only screen and (max-width: 59.375em) {
+  .dateTypeSwitcher {line-height:1rem;/*top:-1rem;*/position: relative;}
+}
+.button.datepicker-close {display: none;}
+#bar {background: #333333;height:20px;width:auto;}
+.space {height: 28px;background-color: transparent;}
+.space2 {height: 26px;background-color: transparent;}
+/*#DivTabs {height: 28px;list-style: none;margin:-12px 0px 0px 0px;padding:0;position:absolute;}
+#DivTabs div {float: left;outline: none;padding: 5px 0px 5px 0px;margin-left: 6px;border-top: 1px #999 solid;border-left: 1px #999 solid;border-right: 1px #999 solid;background-color: #EFEFEF;position:relative;}*/
+.inactive-tab .Yrlist li.YRli:hover, .inactive-tab .Catlist li.Catli:hover {background-color:#F8F8F8;}
+.active-tab .Yrlist li.YRli:hover, .active-tab .Catlist li.Catli:hover {background-color:#EFEFEF;}
+/*#DivTabs div li.LIheader {margin: 0px 6px 0px 6px;}
+#DivTabs div li.SubCat {padding: 3px 6px 3px 6px;white-space:nowrap;}
+#DivTabs div.active-tab {background-color: #ffffff;border-bottom: 1px #fff solid;}
+#DivTabs li.active-tab {background-color: #ffffff;}
+#DivTabs .Yrlist {display:none;text-align:right;}
+#DivTabs .Catlist {display:none;text-align:left;background-color: #EFEFEF;border-bottom: 1px solid #999999;border-left: 1px solid #999999;border-right: 1px solid #999999;/*border-top: 1px solid #999999;*/position:absolute;padding:3px 0 0;top:25px;left:-1px;}*/
+.multiTab {z-index:500;}
+.MoveLeft {position:relative;right: 8px;}
+/*#DivTabs div a {text-decoration: none;color: #666;}*/
+.SelectedYear {color:#666;font-size:15px;font-style:italic;float:right;margin: 5px 0px 0px 10px;height: 30px;}
+.YRli, .Catli {top:5px;position:relative;line-height:20px;}
+.YRliSelected, .CatliSelected {top:5px;position:relative;line-height:20px;font-style:italic;background-color: #F8F8F8;border: solid 1px #ccc;/* background: url("/mdcdb/i/a-left.png") no-repeat scroll right top; */}
+/*#mainmenu {display:block;height:auto;width:auto;clear:both;position:relative;z-index:1;}*/
+#line {display:block;margin-top: -27px;border-top: 1px #999999 solid;z-index:-1;}
+#Clientline {display:block;margin-top: -39px;border-top: 1px #999999 solid;z-index:-1;}
+.bar {/*  margin-top: -25px;  */padding: 5px;background-color: transparent;}
+.boxy-tab {clear:both;height:50px;}
+.boxy-tab img {float:left;margin: 0 10px 10px 0;}
+.boxy-tab a {float:left;font-size: 18px;line-height: 19px;}
+.boxy-tab-info a, 
+.boxy-tab-info span {float:none;display: block;}
+.boxy-tab-info span {line-height:16px;}
+.panel h2 {clear:both;}
+/*#work-year-nav,#work-client-nav {background:#F5F5F5 none repeat scroll 0 0;border-bottom:1px solid #999999;border-top:1px solid #999999;clear:both;display:block;height:14px;margin:10px 0;padding:9px;width:auto;}
+#work-year-nav ul li,#work-client-nav ul li {float: left;}
+#work-year-nav ul li a,#work-client-nav ul li a {height: 30px;outline: none;color: #000;padding:10px 9px 9px 9px;text-decoration:none;}
+#work-year-nav ul li a:hover,#work-client-nav ul li a:hover {color: #999;text-decoration:underline;}
+#work-year-nav ul li a.activecat,#work-client-nav ul li a.activecat {background: #999999;color: #fff;text-decoration:none;}
+#Advertising-year,#Shows-year,#Editorial-year,#Other-year,#Catalog-year,#Magazine-year,#Advertising-client,#Shows-client,#Editorial-client,#Other-client,#Catalog-client,#Magazine-client {display:none;}*/
+.navbox{/* width:840px*/}
+/*ul#tabnav{list-style-type:none;padding:0px 0px 24px 6px;border-bottom:1px solid #999;margin:0}
+ul#tabnavB{list-style-type:none;padding:0px 0px 24px 6px;border-top:1px solid #999;margin:0}
+ul#tabnav li{float:left;text-align:center;height:21px;width:22px;background-color:#EFEFEF;border:1px solid #9A9A9A;margin:2px 4px 0px 0px;}
+ul#tabnavB li{float:left;text-align:center;height:22px;width:24px;background-color:#EFEFEF;margin:0px 4px 2px 0px; position:relative;}
+#tab1 li.tab1,#tab2 li.tab2,#tab3 li.tab3,#tab4 li.tab4,#tab5 li.tab5,#tab6 li.tab6,#tab7 li.tab7,#tab8 li.tab8,#tab9 li.tab9,#tab10 li.tab10,#tab11 li.tab11,#tab12 li.tab12{border-bottom:1px solid #646464;background-color:#646464;}
+ul#tabnav li.pg {background-color:#f7f7f7;border:1px solid #f7f7f7;width:42px;border-bottom: 0px solid #FFFFFF;}
+ul#tabnavB li.pg {background-color:#f7f7f7;border:0px solid #f7f7f7;width:44px;margin-top:1px;}
+ul#tabnav li.yrpg {color:#666;border-bottom:1px solid #fff;border-top:1px solid #9A9A9A;border-left:1px solid #9A9A9A;border-right:1px solid #9A9A9A;background-color:#fff;}
+ul#tabnavB li.yrpg {margin-top:-1px;color:#666;border-top:1px solid #fff;border-bottom:1px solid #9A9A9A;border-left:1px solid #9A9A9A;border-right:1px solid #9A9A9A;background-color:#fff;}
+ul#tabnav li.tab0 {width:42px;}
+ul#tabnavB li.tab0 {width:44px;}
+.curp{display:block;padding:4px;}
+#tabnavB .curp{display:block;padding:4px;position:relative; top:-1px;}
+#tab1 li.tab1 a,#tab2 li.tab2 a,#tab3 li.tab3 a,#tab4 li.tab4 a,#tab5 li.tab5 a,#tab6 li.tab6 a,#tab7 li.tab7 a,#tab8 li.tab8 a,#tab9 li.tab9 a,#tab10 li.tab10 a,#tab11 li.tab11 a,#tab12 li.tab12 a{color:#ffffff;}
+#tabnav a{display:block;color:#666;text-decoration:none;padding:4px;}
+#tabnav a:hover{background:#ffffff;color:#666;}
+#tabnavB a{display:block;color:#666;text-decoration:none;padding:4px;position:relative; top:-1px;border:1px solid #9A9A9A;}
+#tabnavB a:hover{background:#ffffff;color:#666; border-top:1px solid #fff;}*/
+.mtxt,.adHeadline A:active,.adHeadline A:hover,.adHeadline A:visited:hover,.topnav A:active,.topnav A:hover,.topnav A:visited:hover{color:#CCF;}
+.tabrow{background-color:#f7f7f7;}
+.alphadiv{margin:10px;width:auto; text-align:center;}
+.spacer {clear:both;}
+.Ebutt {float:left;text-align:center;background-color:#EFEFEF;border:1px solid #9A9A9A;}
+.Ebutt a{font-family: Arial,Helvetica,sans-serif;font-size: 12px;color:#666;text-decoration:none;padding:4px;padding: 1px 4px;}
+.Ebutt a:hover{background:#ffffff;color:#666;}
+/* Stephan's Ultimate Tweak of Dan's Ultimate Tweak */
+/*#tabnav li.tabcurrent {color:#666;border-bottom:1px solid #fff;background-color:#fff;}
+#tabnavB li.tabcurrent {color:#666;border-top:1px solid #fff;border-right:1px solid #9A9A9A;border-bottom:1px solid #9A9A9A;border-left:1px solid #9A9A9A;background-color:#fff;margin-top:-1px;padding-top:1px;width:22px;}*/
+
+
+
+/* from userinput.css */
+.disabled {background-color: #ccc;color: #fff}
+/*a {color:black;}*/
+#model1,#model2,#model3,#model4,#model5,#client1,#type1,#workname,#crew1,#crew2,#crew3,#crew4,#crew5,#date,#link,#upload {display:block;clear:both;}
+.field-name {display:block;height:auto;width:100px;text-align: right;margin-right:10px;}
+.floatl {float:left;display:block;}
+.select-emph {color:red;}
+.PendingCrew {color:gray;font-style:italic;font-size:10px;}
+.checkallG {background:#ccc;}
+.ImgLoop {margin:0px 0px 12px 0px;height:auto;overflow:hidden;clear:both;position:relative;padding:5px 0 0 0;background-color:#f1f1f1;min-height:150px;border-top: 1px dotted;border-bottom: 1px dotted;}
+.ImgUploaderDiv {background:#fff;}
+.exImg_Thumb object {height: 100px;margin:0 .5rem;}
+#exImageHolder .ui-sortable-placeholder {margin:0px 0px 12px 0px;}
+.ImgLoop:hover {/*height:auto;*/}
+.uploadFilenameCaption {text-align:center;font-size: .7rem;margin:.5rem;white-space: nowrap;width:100px;}
+.exImgBacDiv {margin:0 .5rem;}
+.exImg_Thumb {/*display:inline;width:100px;float:left;position:relative;margin:0 20px 0 10px;*/}
+.exImg_ThumbImg {height:100px;width:100px;display:block;margin-bottom:10px;}
+.vidButton {/*display:inline;width:100px;height:100px;float:left;position:relative;margin:0 20px 0 0;*/}
+.vidButton img {display:block;margin:0 .5rem;}
+#vid_button {padding: 0 .5rem; }
+@media only screen and (max-width: 59.375em) {#vid_button {padding-top: .5rem;}}
+a.fancybox {cursor:url(/i/magnify.cur), -moz-zoom-in;}
+.exImgBacDiv {height:100px;width:100px;background-size:contain;background-position:center;background-repeat:no-repeat;position: relative;cursor:pointer;}
+.play img {display:block;}
+.ImgLoop > div {position:relative;top:10px;}
+.ImgLoop > div.hiddenMedia {position:absolute;z-index:90;background:url('/i/db/transBack80.png');height:100px;width:100px;margin:.3rem 0 0 1rem;}
+.hiddenImage img {opacity: .25 !important;}
+.ImgLoop div.play {position:absolute;left:33px;top:48px;z-index:999;}
+.ImgLoop div.viewMore-142 {position:absolute;top:129px;background-color:#FFFFFF;border-top: 1px dotted;padding: 0;}
+.ImgLoop div.viewMore-400 {position:absolute;top:387px;background-color:#FFFFFF;border-top: 1px dotted;padding: 0;}
+#moreLessButton {cursor: pointer;background-color:#f1f1f1;font-size:10px;border-bottom: 1px dotted;border-left: 1px dotted;border-right: 1px dotted;margin: 0 auto;padding: 0 0 3px;position: relative;text-align: center;top: -1px;width: 80px;height:12px;}
+.vidPop {display:none;clear:both;float:left;margin:10px 0px 20px 0px;position:absolute;top:-12px;width:100%;padding:10px;background-color:white;border:1px solid black;z-index:999;}
+.select_models, .select_therest {margin-bottom:20px;}
+.select_models em, .select_therest em {display:inline-block;margin-bottom:.5rem;}
+div.imgTip {width:356px;max-width:500px;border:4px solid #333;background-color:#333;}
+div.imgTip img {display:block;}
+#exImageHolder {position:relative;}
+.RoleDivider {width:650px;/*height:1px;padding:0 5px;border-bottom:2px solid #ccc;*/}
+.RoleTitle {wfont-style:italic;text-transform:uppercase;border-bottom:1px solid #ccc;border-top:1px solid #ccc;padding:3px 10px;color:#999;}
+.agencyAssociationsHR {border-bottom:1px #CCC solid;margin:1rem 0;}
+.agencyAssociationsNamesBox, .agencyAssociationsChecksBox {display:inline-block;}
+.agencyAssociationsListItem {padding:0 0 2px 0;}
+.agencyAssociationsCheckbox {padding:0 0 2px 5px;}
+.agencyAssociationsCheckbox input {margin:0; padding:0;}
+.left-ubox {border-bottom:1px solid #ccc;padding:.5rem;}
+.HiLite, .MediaBox {text-align: center;padding: .5rem .5rem 0;position: relative;}
+.HiLite {background-color: #ffffcc;border:1px solid #999;}
+.MediaBox {border:1px solid #CCCCCC;}
+.draft-thumbs-x {position:relative;top:20px; left:60px;z-index:100; background-color:#FFF; padding: 0px; margin:0px;width:16px;}
+.input-spacer {width: auto;height: 10px;clear: both;}
+span.right-size {display: inline-block;width: 150px;}
+.drafts-listrow, .assoc_row.linkit {border-bottom:1px solid #ccc;padding:.5rem;cursor:pointer;}
+.drafts-listrow:hover, .assoc_row.linkit:hover {background-color: #f7f7f7;}
+.drafts-listheader {padding:.5rem;}
+.deleteCampaignButton {z-index: 1000;}
+.smallStatusDiv {font-size: .5rem;padding:.5rem 0 0;}
+.draftSubmitted {opacity: .6;}
+.draftlist-actions i {color: #666666;display: inline-block;}
+.draftlist-actions i:hover {color: #000;}
+.draftlist-actions img {padding: 0 0 0 .5rem;}
+@media only screen and (max-width: 40em) {
+	.editor .contentbox {padding:1.5rem 0;}
+	.draftlist-actions i {padding-bottom: .5rem;}
+}
+.draftlist-delete i, .draftlist-delete a i {color: #222;margin: 0 0 12px 12px;font-size: 1.2rem;}
+.draftlist-delete i:hover, .draftlist-delete a i:hover {color: #666;}
+.AgencyDivider .sortable, .noProfileImages, .assoc_row {padding: .5rem;border-bottom:1px solid #ccc;}
+.draftlist-img img {width: 50px;height: 50px;display: inline;margin-right: 4px;border: none;}
+@media only screen and (max-width: 40em) {.drafts-listrow .columns {padding: 0 2px;}}
+.agencyImage-client {font-size: 1.2rem;padding-left:.5rem;}
+.agencyImage-campaign {font-size: .8rem;padding-left:.5rem;}
+.editor {color:#66696c;}
+.editor .contentbox select, .editor .contentbox input[type="text"] {height:initial;line-height: initial;font-size: 1rem;margin:0;border-radius: .25rem;}
+.rowPad1 {padding: 0 0 .5rem .3rem;}
+@media only screen and (max-width: 40em) {.rowPad1 {padding: 0 0 1rem .3rem;}}
+.editorFieldTitle, .editorFieldTxt {padding:.6rem 0 0;}
+@media only screen and (max-width: 40em) {.editorFieldTxt {padding:.2rem 0 0;}}
+.search-main ul {display: inline;}
+
+#UIcr_ResultsHolder .results img {width: 80px;}
+
+.editor button, .editor .button {margin:0;}
+.editor .button.padButton {margin:0 0 1rem;}
+.mdcAccount select {line-height: normal;}
+.mdcAccount .basicInfoForm .editorFieldTxt {margin: 0 0 .9rem;}
+.mdcAccount .basicInfoForm input {height: 2.3125rem;}
+.mdcAccount .basicInfoForm input, .mdcAccount .basicInfoForm select,  .mdcAccount .button {margin: 0 0 .2rem;}
+/* jquery.modal & FAQ links/modal */
+.jquery-modal.blocker {z-index: 1000000;}
+.faqLinkDiv {font-size: 1rem;line-height: 1.2;}
+.faqLinkDiv a {color: #827430;}
+.faqLinkDiv a:hover {color: #706429;}
+.jquery-modal .post-content h2 {font-size: 1.6rem;margin: 0 0 1.6rem;}
+.jquery-modal .post-content .post-content p {line-height: 1.6;margin-bottom: 25px}
+.jquery-modal .modal {max-width: initial;}
+.jquery-modal .modal a.close-modal {background:initial;font-size:1.375rem;line-height:1rem;position:absolute;top:.5rem;right:.6875rem;color:#aaa;font-weight:700;text-indent: initial;width: initial;height: initial;}
+
+
+.editorSection-header {position: relative;}
+.editorSection-header select {margin-bottom: 0;padding-top: 0;padding-bottom: 0;height: 1.2rem;line-height: 1.2rem;}
+.editorSection-header .prefix, .editorSection-header .postfix {height: 1.2rem;line-height: 1.2rem;}
+.editorSection-header .close-reveal-modal {margin-top:-.2rem;}
+.smallHeader {
+    font-size: .65rem;
+    text-transform: lowercase;
+    color: black;
+  }
+.row.editorSection-header > :first-child {font-weight: bold;font-size:1.2rem;}
+.pad1 {padding-top: 1rem;}
+.pad2 {padding-top: 2rem;}
+.imageRow .play {position:absolute;left:-15px;margin-left:50%;top:2rem;z-index:999;}
+.xDel {position:absolute;top:-.5rem; right:-.8rem;z-index:100;}
+.helpbox {margin: 0 .5rem;border:1px solid #fff;font-weight:bold;display:inline-block;padding:.6rem .7rem;border-radius: 1rem;background-color: #f7f7f7;}
+.dupContainer {padding:2rem 0 0 2rem;background-color: #eeeded;}
+@media only screen and (max-width: 40em) {.dupContainer {padding:2rem;}}
+.qtip {width:initial;}
+.qtip-content {width: initial;}
+.dupPop .qtip-content {width: 400px;}
+.qtip-contentRow {padding:.5rem 0;}
+.crewrow {padding: 5px;font-size: .9rem;border:1px solid white;}
+.crewrow1 {background:#ffffff;}
+.crewrow2 {background:#f0f0f0;}
+.crewname {padding-left:5px;line-height:2rem;}
+.crewtype {padding-top: 0;}
+.crewFlag {padding:0 .5rem;display: inline-block;}
+.crewNotes a:hover {text-decoration:none;}
+.crewNotes {font-size:.75rem;padding-left: .25rem;}
+.crewdelete, .crewHide, .crewPHide {padding:.2rem .3rem;display: inline-block;}
+@media only screen and (max-width: 40em) {.crewdelete, .crewHide, .crewPHide {margin:5px 0 0 0;}}
+.addCrewRow {padding:.5rem .5rem 0; font-weight: bold;}
+.addCrewRow .results span {font-weight: normal;color:#999;}
+.addCrewHeader {padding-bottom: 0.5rem;}
+.assignCrewTitle {padding: .6rem 0;}
+.checkAllRow {padding:.5rem 0 0 .5rem;}
+.checkAllLabel {padding:0 0 0 .5rem;}
+.results {width: 100%;}
+.HiddenDraft {font-size:.75rem;}
+.hiddenCrewRow .crewname,.hiddenCrewRow .crewtype {opacity: .7;}
+.editor .columns{  min-height: 1rem;}
+.qtip {z-index: 100002 !important;}
+.reveal-modal, .fancybox-overlay, .fancybox-container {z-index: 100001;}
+.reveal-modal-bg {z-index: 100000;}
+.PreviewPane {background-color: #f2f2f2; line-height: 3;}
+.PreviewPane .editMode {padding-left: 1.25rem;margin: 5px 0;}
+.PreviewPane .EditButtonRow {margin: 5px; }
+.PreviewPane .ui.basic.button {background-color: white !important;}
+.fi-x.editorX {font-size:0.9rem;color:#66696c;background-color:white;border:1px solid #e5e5e5;border-radius:1rem;position: relative;bottom:.2rem;padding:.2rem .4rem .2rem .43rem}
+.PreviewPane .editorX {position: relative;bottom:-5px;left:-5px;margin: 0 5px;}
+.fi-x.editorX:hover {background-color:#e5e5e5;}
+
+.ui.basic.button.whtBck {background-color: white !important;margin: 1rem;}
+.ui.basic.button.smalluibut {font-size: .7rem;padding: .5rem 1rem;margin-bottom: 2px;}
+.client-work-box .ui.basic.button.smalluibut {margin-top: 5px;}
+.workSlider.row.noImages div {background: #f8f8f8; text-align:center; width:100%;}
+.workSlider.row.noImages p {padding: 40px 0; font-size: 1.5rem; margin:0;line-height:2rem;}
+.workSlider.row.noImages i.ilarge {font-size: 10rem; color: rgba(34,36,38,.15);}
+/*.EditButton, .button.EditButton {padding:.25rem .375rem;font-size: .8rem;position: absolute;top:.5rem;right:.5rem;}
+.EditButton:hover, .button.EditButton:hover {background-color: #eeeded;}*/
+/*.EditButton.EditNoImages {top:0;right:0;position: relative;}*/
+.workEditRow .EditButton {margin-right: 2.5rem;}
+.panel {position: relative;}
+.button.tiny.cancel {background-color: white;float:right;padding:.5rem;}
+.button.topButtons {margin-right: .5rem;position: relative;top:0;right: 0;padding: .5rem;text-transform: uppercase;font-size: .8rem;}
+
+/* missing from our main css? */
+form .row .postfix-radius.row.collapse input,
+form .row .postfix-radius.row.collapse textarea,
+form .row .postfix-radius.row.collapse select,
+form .row .postfix-radius.row.collapse button {
+  border-radius: 0;
+  -webkit-border-bottom-left-radius: .25rem;
+  -webkit-border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-top-left-radius: .25rem; }
+form .row .postfix-radius.row.collapse .postfix {
+  border-radius: 0;
+  -webkit-border-bottom-right-radius: .25rem;
+  -webkit-border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  border-top-right-radius: .25rem; }
+/*
+.crewHide.padPlus {border-radius: .4rem;border:2px solid #40a348;}
+.crewHide.padMinus {border-radius: .4rem;border:2px solid #d77a00;}
+.crewdelete.padDelete {border-radius: .4rem;border:2px solid #da2121;}
+*/
+.crewHide .fa-plus, .fa-toggle-on {color:#40a348;font-size: 1.3rem;}
+.crewHide .fa-times, .fa-toggle-off {color:#aaa;font-size: 1.3rem;}
+.crewdelete .fa-times {color:#da2121;font-size: 1.3rem;}
+.crewPHide .fa-user-plus,.crewPHide .fa-user,.crewHide .fa-users {color:#40a348;font-size: 1.3rem;}
+.crewPHide .fa-user-times {color:#d77a00;font-size: 1.3rem;}
+.ShowHideHeader, .DeleteHeader {visibility: hidden;}
+
+#basedEditDiv {position:relative;}
+#bIsearch {position: absolute;right: 5px;top: 9px;min-height: 16px;min-width: 16px;}
+#empty-message {position: relative;left: 1rem;top: -.8rem;color: darkred;}
+#basedinput.basedselected {border-color:white !important;box-shadow:inset 0 1px 2px rgba(0,0,0,0) !important;}
+.showerrorrow, .cityalert, .genderalert {display: none;}
+
+/*Agency Featured Images Options*/
+.agencyDisplayOptionsContainer {display: grid;grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));grid-gap: 1rem;align-items:stretch;margin: 1rem 0;}
+.agencyDisplayOptions {}
+.agencyDisplayOptions .ui.button {min-height: 4rem; padding: 2rem;height: 100%;}
+.agencyDisplayOptions .ui.button.selected {border:1px solid #52c16c;}
+
+#peopleDetail {position: relative;}
+#peopleDetail .draftWorkRow > div > div:not(.workStatusRow), .mdcClients .client-work-box .draftWorkRow > div > div:not(.workStatusRow) {opacity: .3;}
+#peopleDetail .draftWorkRow div.workStatusRow, .mdcClients .client-work-box .draftWorkRow div.workStatusRow {font-weight: bold; font-style: italic; color: #7A7A7A; line-height: 1.2rem;}
+#peopleDetail .draftPersonOverlay {height: 100%;width: 100%; background-color: rgba(255,255,255,0.8); position: absolute;top: 0;text-align: center;font-size: 3rem;padding: 20% 5%;}
+#peopleDetail .draftPersonOverlay span {background-color: white;display: block; padding: 1rem;max-width: 63.25rem;margin: auto;}
+#peopleDetail .draftPersonOverlay blockquote {font-size: 1rem; padding: 2rem 0;border: none;}
