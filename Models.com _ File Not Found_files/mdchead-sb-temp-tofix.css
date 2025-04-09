@@ -1,0 +1,83 @@
+/* needed by favorites/repped/discover work */
+.sb-grid--scroll .sb-card .sb-card__text {
+    white-space: inherit;
+}
+
+/* needed by index_cover, articles tier2/3 */
+.sb-article-card--small .sb-article-card__text .sb-subtitle,
+.sb-article-card--large .sb-article-card__text .sb-subtitle,
+.sb-hero-banner .sb-subtitle {
+    text-transform: capitalize;
+}
+
+/* for Tier2 on title align */
+.sb-article-card--large .sb-article-card__text .sb-title,
+.mdc-tier2 .sb-article-card--large .sb-article-card__text .sb-subtitle {
+    text-align: right;
+}
+
+/* add a border to db and trending for images missing borders (white background) */
+.sb-card--border-radius .sb-card__img,
+.trendSlideRow .sb-card__img {
+    border: 1px solid #d4d4d4;
+}
+
+/* needed by index_cover */
+.sb-hero-banner__img {
+    height: inherit;
+}
+
+.sb-tagged__avatars .sb-avatar__img--initials {min-width: auto; min-height: auto; font-size: .6rem;}
+
+/* needed for join login buttons in footer */
+footer.sb-footer .sb-footer__buttons a.sb-button--primary,
+footer.sb-footer .sb-footer__buttons a.sb-button--primary:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* MDC video arrows */
+.sb-card--video .sb-card__img::before {content: initial;}
+.sb-card--video .sb-card__img::after {width: 24px;height: 24px;background-image: url(https://i.mdel.net/i/db/play-md.png);}
+
+.sb-hero-banner__text {width: 60%; margin:24px auto;}
+@media screen and (max-width: 40em) {
+	.sb-hero-banner__text {width: 100%;}
+}
+
+.sb-section .sb-pagination a:not(.sb-pagination__page--active) {text-decoration: none;color: #ccc;}
+@media screen and (max-width: 768px) {
+	.sb-section .sb-pagination>*:not(:last-child), .sb-section .sb-pagination .sb-pagination__page, .sb-section .sb-pagination .sb-pagination__dots {margin-right: 24px;line-height: 24px}
+}
+.sb-article-card--small.editorialPageCoverStory .sb-article-card__text .sb-title {font-size: 1.5rem;line-height: 2rem;}
+.sb-article-card--small:not(.editorialPageCoverStory) .sb-image__img {max-height: 350px;overflow: hidden;}
+/*.sb-article-card--small .sb-article-card__img {position: relative;}*/
+/*.sb-article-card--small .coverStoryCallout {
+	text-align: center;
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    right: 5px;
+    bottom: -40px;
+ }*/
+ /*.sb-article-card--large .coverStoryCallout {
+    position: relative;
+    float: left;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 3px 5px;
+    top: -4px;
+}*/
+/* .sb-article-card--small .coverStoryCallout {
+     position: relative;
+    float: right;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 3px 5px;
+    top: -4px;
+}*/
+/* needed to make :visited buttons not all black */
+.sb-button--primary.sb-text-media__text--cta {
+	color: #fff;
+}
