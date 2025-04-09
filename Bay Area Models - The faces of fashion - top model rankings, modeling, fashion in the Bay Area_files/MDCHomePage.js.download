@@ -1,0 +1,52 @@
+
+jQuery(document).ready(function() {
+	jQuery("img").unveil(100)
+	// jQuery(".proSearchSelectionCol").scrollTop(300);
+	jQuery(".proSearchSelectionCol").animate({ scrollTop: 70 });
+
+    jQuery('.hpVideoLink').on('click', function(e) {
+    	e.preventDefault()
+        $('<form action="/db/advertising/" method="post"><input type="hidden" name="videoCheck" value="1"></form>').appendTo('body').submit();
+    });
+});
+
+function initSlick() {
+    if (window.innerWidth > 496 && !$('#trendslider').hasClass('slick-initialized')){
+        $('#trendslider').slick({
+            lazyload:'ondemand',
+            infinite:false,
+            swipe:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            // fade: true,
+            dots:false,
+            prevArrow: '.trendingPrev',
+            nextArrow: '.trendingNext'
+        });
+        $('#FeaturedListSlider').slick({
+            lazyload:'ondemand',
+            infinite:false,
+            swipe:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            // fade: true,
+            dots:false,
+            prevArrow: '.featuredPrev',
+            nextArrow: '.featuredNext'
+        });
+      } else if ($(window).width() <= 496 && $('#trendslider').hasClass('slick-initialized')) {
+        $('#trendslider').slick('unslick');
+        $('#FeaturedListSlider').slick('unslick');
+      }
+  }
+  $(document).ready(function(){
+    initSlick();
+    $('#trendslider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$("#trendslider img").trigger("unveil");
+	});
+  });
+  $( window ).on('resize',function() {
+    initSlick();
+  });
